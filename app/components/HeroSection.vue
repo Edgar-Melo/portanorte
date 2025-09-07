@@ -22,7 +22,7 @@
             Oferecemos soluções personalizadas com dedicação e excelência.
           </p>
           <div class="flex flex-col sm:flex-row gap-6">
-            <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg">Ver Produtos</ButtonPrimary>
+            <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="scrollToProducts">Ver Produtos</ButtonPrimary>
             <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg">Fale Conosco</ButtonSecondary>
           </div>
         </div>
@@ -39,6 +39,17 @@
 <script setup>
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
+
+// Função para rolar suavemente até a seção de produtos
+const scrollToProducts = () => {
+  const productsSection = document.getElementById('products')
+  if (productsSection) {
+    productsSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
 </script>
 
 <style scoped>
