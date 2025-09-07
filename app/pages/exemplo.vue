@@ -51,6 +51,65 @@
         </div>
       </div>
 
+      <!-- Seção de Ícones para Altura e Largura -->
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Ícones Heroicons - Opções para Altura e Largura</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center">
+            <ArrowsUpDownIcon class="w-12 h-12 text-blue-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowsUpDownIcon</p>
+            <p class="text-xs text-gray-500">Altura</p>
+          </div>
+          <div class="text-center">
+            <ArrowsRightLeftIcon class="w-12 h-12 text-green-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowsRightLeftIcon</p>
+            <p class="text-xs text-gray-500">Largura</p>
+          </div>
+          <div class="text-center">
+            <ArrowUpIcon class="w-12 h-12 text-purple-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowUpIcon</p>
+            <p class="text-xs text-gray-500">Cima</p>
+          </div>
+          <div class="text-center">
+            <ArrowDownIcon class="w-12 h-12 text-red-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowDownIcon</p>
+            <p class="text-xs text-gray-500">Baixo</p>
+          </div>
+          <div class="text-center">
+            <ArrowLeftIcon class="w-12 h-12 text-yellow-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowLeftIcon</p>
+            <p class="text-xs text-gray-500">Esquerda</p>
+          </div>
+          <div class="text-center">
+            <ArrowRightIcon class="w-12 h-12 text-orange-500 mx-auto mb-2" />
+            <p class="text-sm">ArrowRightIcon</p>
+            <p class="text-xs text-gray-500">Direita</p>
+          </div>
+          <div class="text-center">
+            <Bars3Icon class="w-12 h-12 text-pink-500 mx-auto mb-2" />
+            <p class="text-sm">Bars3Icon</p>
+            <p class="text-xs text-gray-500">Linhas</p>
+          </div>
+          <div class="text-center">
+            <Bars4Icon class="w-12 h-12 text-indigo-500 mx-auto mb-2" />
+            <p class="text-sm">Bars4Icon</p>
+            <p class="text-xs text-gray-500">Linhas</p>
+          </div>
+        </div>
+        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+          <h3 class="text-lg font-medium mb-2">Análise para Dimensões:</h3>
+          <ul class="text-sm space-y-1">
+            <li><strong>ArrowsUpDownIcon:</strong> Perfeito para "Altura" (setas verticais)</li>
+            <li><strong>ArrowsRightLeftIcon:</strong> Ideal para "Largura" (setas horizontais)</li>
+            <li><strong>ArrowUpIcon/ArrowDownIcon:</strong> Para direções específicas</li>
+            <li><strong>Bars3Icon/Bars4Icon:</strong> Representam medidas/linhas</li>
+          </ul>
+          <p class="text-sm mt-3 text-blue-700">
+            <strong>Recomendação:</strong> <code>ArrowsUpDownIcon</code> para altura e <code>ArrowsRightLeftIcon</code> para largura são as melhores opções pois indicam claramente as direções das dimensões.
+          </p>
+        </div>
+      </div>
+
       <!-- Seção de Toasts -->
       <div class="bg-white rounded-lg shadow-lg p-6">
         <h2 class="text-2xl font-semibold mb-4">Notificações Toast</h2>
@@ -86,7 +145,7 @@
 </template>
 
 <script setup>
-import { HomeIcon, BuildingOfficeIcon, BuildingStorefrontIcon, WindowIcon, KeyIcon, LockClosedIcon, LockOpenIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, BuildingOfficeIcon, BuildingStorefrontIcon, WindowIcon, KeyIcon, LockClosedIcon, LockOpenIcon, ArrowsUpDownIcon, ArrowsRightLeftIcon, ArrowUpIcon, ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, Bars3Icon, Bars4Icon } from '@heroicons/vue/24/outline'
 import { useToast } from 'vue-toastification'
 
 const toast = useToast()
