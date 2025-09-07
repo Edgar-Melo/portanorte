@@ -5,24 +5,49 @@
 
       <!-- Seção de Ícones Heroicons -->
       <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Ícones Heroicons</h2>
+        <h2 class="text-2xl font-semibold mb-4">Ícones Heroicons - Opções para Porta</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="text-center">
             <HomeIcon class="w-12 h-12 text-blue-500 mx-auto mb-2" />
-            <p class="text-sm">HomeIcon</p>
+            <p class="text-sm">HomeIcon (Casa)</p>
           </div>
           <div class="text-center">
-            <UserIcon class="w-12 h-12 text-green-500 mx-auto mb-2" />
-            <p class="text-sm">UserIcon</p>
+            <BuildingOfficeIcon class="w-12 h-12 text-green-500 mx-auto mb-2" />
+            <p class="text-sm">BuildingOfficeIcon</p>
           </div>
           <div class="text-center">
-            <CogIcon class="w-12 h-12 text-purple-500 mx-auto mb-2" />
-            <p class="text-sm">CogIcon</p>
+            <BuildingStorefrontIcon class="w-12 h-12 text-purple-500 mx-auto mb-2" />
+            <p class="text-sm">BuildingStorefrontIcon</p>
           </div>
           <div class="text-center">
-            <HeartIcon class="w-12 h-12 text-red-500 mx-auto mb-2" />
-            <p class="text-sm">HeartIcon</p>
+            <WindowIcon class="w-12 h-12 text-red-500 mx-auto mb-2" />
+            <p class="text-sm">WindowIcon (Janela)</p>
           </div>
+          <div class="text-center">
+            <KeyIcon class="w-12 h-12 text-yellow-500 mx-auto mb-2" />
+            <p class="text-sm">KeyIcon (Chave)</p>
+          </div>
+          <div class="text-center">
+            <LockClosedIcon class="w-12 h-12 text-orange-500 mx-auto mb-2" />
+            <p class="text-sm">LockClosedIcon</p>
+          </div>
+          <div class="text-center">
+            <LockOpenIcon class="w-12 h-12 text-pink-500 mx-auto mb-2" />
+            <p class="text-sm">LockOpenIcon</p>
+          </div>
+        </div>
+        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+          <h3 class="text-lg font-medium mb-2">Análise dos Ícones:</h3>
+          <ul class="text-sm space-y-1">
+            <li><strong>HomeIcon:</strong> Melhor representação para "Portas" (porta de casa)</li>
+            <li><strong>BuildingOfficeIcon:</strong> Bom para escritórios/escritório</li>
+            <li><strong>BuildingStorefrontIcon:</strong> Ideal para cozinha/loja</li>
+            <li><strong>KeyIcon:</strong> Representa acesso/chaves</li>
+            <li><strong>LockClosedIcon/LockOpenIcon:</strong> Representam fechaduras</li>
+          </ul>
+          <p class="text-sm mt-3 text-gray-600">
+            <strong>Recomendação:</strong> O <code>HomeIcon</code> é a melhor opção para representar "Portas" pois simboliza entrada residencial.
+          </p>
         </div>
       </div>
 
@@ -61,7 +86,7 @@
 </template>
 
 <script setup>
-import { HomeIcon, UserIcon, CogIcon, HeartIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, BuildingOfficeIcon, BuildingStorefrontIcon, WindowIcon, KeyIcon, LockClosedIcon, LockOpenIcon } from '@heroicons/vue/24/outline'
 import { useToast } from 'vue-toastification'
 
 const toast = useToast()
