@@ -10,9 +10,11 @@
     "postinstall": "npx nuxt prepare"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "nuxt": "^4.1.0",
     "vue": "^3.5.20",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue-toastification": "^1.7.14"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0"
