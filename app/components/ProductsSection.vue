@@ -20,10 +20,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
-              </svg>
+              <HomeIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Portas</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -38,9 +35,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-              </svg>
+              <WindowIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Janelas</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -55,9 +50,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-              </svg>
+              <HomeIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Sala</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -72,9 +65,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-              </svg>
+              <BuildingStorefrontIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Cozinha</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -89,10 +80,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
-              </svg>
+              <HomeIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Quartos</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -107,9 +95,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
+              <BuildingOfficeIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Escritório</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -124,9 +110,7 @@
         <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-              </svg>
+              <HomeIcon class="w-10 h-10 text-white" />
             </div>
             <h3 class="text-2xl font-bold text-white mb-4 drop-shadow-md">Banheiro</h3>
             <p class="text-neutral-100 mb-6 leading-relaxed drop-shadow-sm">
@@ -157,6 +141,7 @@
 <script setup>
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
+import { HomeIcon, WindowIcon, BuildingOfficeIcon, BuildingStorefrontIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <style scoped>
