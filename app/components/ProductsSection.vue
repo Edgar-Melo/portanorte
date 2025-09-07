@@ -121,7 +121,7 @@
         </div>
 
         <!-- Banheiro -->
-        <div class="group bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-200">
+        <div class="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white border-opacity-20">
           <div class="text-center">
             <div class="w-20 h-20 bg-accent-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent-300 transition-colors duration-300">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
