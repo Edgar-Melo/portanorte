@@ -131,7 +131,7 @@
           <p class="text-xl mb-6 opacity-90">
             Temos soluções personalizadas para todas as suas necessidades em madeira.
           </p>
-          <ButtonPrimary>
+          <ButtonPrimary @click="$router.push('/encomendas')">
             Fale Conosco
           </ButtonPrimary>
         </div>
