@@ -43,7 +43,7 @@
             </div>
 
             <!-- Resultado -->
-            <div v-if="result !== null" class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
+            <div class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
               <h3 class="text-white font-semibold mb-2">Valor Estimado:</h3>
               <p class="text-2xl font-bold text-white">R$ {{ ((result || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</p>
               <p class="text-sm text-neutral-200 mt-2">
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Resultado -->
-            <div v-if="result2 !== null" class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
+            <div class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
               <h3 class="text-white font-semibold mb-2">Valor Estimado:</h3>
               <p class="text-2xl font-bold text-white">R$ {{ ((result2 || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</p>
               <p class="text-sm text-neutral-200 mt-2">
@@ -146,7 +146,7 @@
             </div>
 
             <!-- Resultado -->
-            <div v-if="result3 !== null" class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
+            <div class="mt-8 p-4 bg-primary-600 bg-opacity-20 rounded-lg border border-primary-500">
               <h3 class="text-white font-semibold mb-2">Valor Estimado:</h3>
               <p class="text-2xl font-bold text-white">R$ {{ ((result3 || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</p>
               <p class="text-sm text-neutral-200 mt-2">

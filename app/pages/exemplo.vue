@@ -48,6 +48,9 @@
           <p class="text-sm mt-3 text-gray-600">
             <strong>Recomendação:</strong> O <code>HomeIcon</code> é a melhor opção para representar "Portas" pois simboliza entrada residencial.
           </p>
+          <p class="text-sm mt-3 text-gray-600">
+            <strong>Recomendação:</strong> O <code>DoorOpen</code> é a melhor opção para representar "Portas" pois simboliza entrada.
+          </p>
         </div>
       </div>
 
@@ -146,15 +149,15 @@
 
 <script setup>
 import { HomeIcon, BuildingOfficeIcon, BuildingStorefrontIcon, WindowIcon, KeyIcon, LockClosedIcon, LockOpenIcon, ArrowsUpDownIcon, ArrowsRightLeftIcon, ArrowUpIcon, ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, Bars3Icon, Bars4Icon } from '@heroicons/vue/24/outline'
-import { useToast } from 'vue-toastification'
 
-const toast = useToast()
+// const toast = useToast()
 
 const showSuccessToast = () => {
-  toast.success('Operação realizada com sucesso!', {
-    timeout: 3000,
-    position: 'top-right'
-  })
+  // toast.success('Operação realizada com sucesso!', {
+  //   timeout: 3000,
+  //   position: 'top-right'
+  // })
+  alert('Toast desabilitado - vue-toastification removido')
 }
 
 const showErrorToast = () => {
