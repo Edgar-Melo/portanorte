@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-br from-primary-800 via-primary-500 to-primary-200">
+  <div class="min-h-screen">
     <HeroSection />
     <AboutSection />
     <ProductsSection />

@@ -4,18 +4,18 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <!-- Lado esquerdo: Texto de apresentação -->
         <div class="text-left">
-          <h2 class="text-4xl font-bold text-white mb-6">
+          <h2 class="text-4xl font-bold text-primary-800 mb-6">
             Sobre Nós
           </h2>
-          <p class="text-lg text-neutral-100 mb-6 leading-relaxed">
+          <p class="text-lg text-primary-700 mb-6 leading-relaxed text-justify">
             A Porta Norte é uma empresa especializada em móveis e estruturas em madeira, localizada em Oiapoque.
             Com anos de experiência, oferecemos soluções personalizadas para portas, janelas e materiais de construção de alta qualidade.
           </p>
-          <p class="text-lg text-neutral-100 mb-6 leading-relaxed">
+          <p class="text-lg text-primary-700 mb-6 leading-relaxed text-justify">
             Nossa missão é transformar madeira em arte, criando peças únicas que combinam tradição e modernidade.
             Valorizamos a sustentabilidade, utilizando madeiras certificadas e técnicas artesanais para garantir durabilidade e beleza.
           </p>
-          <p class="text-lg text-neutral-100 leading-relaxed">
+          <p class="text-lg text-primary-700 leading-relaxed text-justify">
             Venha nos conhecer e descubra como podemos ajudar a realizar o seu projeto dos sonhos.
           </p>
         </div>
