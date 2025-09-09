@@ -73,3 +73,12 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Deploy to Vercel
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Vercel will automatically detect your Nuxt project and deploy it
+4. Your site will be available at a `.vercel.app` URL
+
+The `vercel.json` file is already configured for optimal Nuxt deployment.
