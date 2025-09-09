@@ -171,7 +171,7 @@
                       Entre em contato conosco para tirar suas dúvidas sobre móveis de sala:
                     </p>
                     <p class="text-primary-800 font-semibold">
-                      📞 (98) 99999-9999<br>
+                      📞 (96) 98426-3674<br>
                       📧 contato@portanorte.com.br
                     </p>
                   </div>

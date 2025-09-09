@@ -125,7 +125,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-bold text-primary-800">Telefone</h4>
-                  <p class="text-primary-700">(98) 99999-9999</p>
+                  <p class="text-primary-700">(96) 98426-3674</p>
                 </div>
               </div>
 
