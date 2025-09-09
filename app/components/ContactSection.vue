@@ -96,7 +96,7 @@
             <h3 class="text-2xl font-bold text-primary-800 mb-6 text-center">Nossa Localização</h3>
             <div class="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.789!2d-51.8333!3d1.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d5f8b8b8b8b8b8b%3A0x8d5f8b8b8b8b8b8b!2sOiapoque%2C%20AP!5e0!3m2!1sen!2sbr!4v1690000000000!5m2!1sen!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.789!2d-51.8375141!3d3.8455042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d6cc55e95924b25:0x2ec6bf5ca3687aa7!2sPorta%20Norte%20-%20Oiapoque!5e0!3m2!1sen!2sbr!4v1690000000000!5m2!1sen!2sbr"
                 width="100%"
                 height="300"
                 style="border:0;"
@@ -107,8 +107,9 @@
               ></iframe>
             </div>
             <div class="mt-4 text-center">
-              <p class="text-primary-700 font-medium">Oiapoque - Amapá</p>
-              <p class="text-primary-600 text-sm">Brasil</p>
+              <p class="text-primary-700 font-medium">Porta Norte - Oiapoque</p>
+              <p class="text-primary-600 text-sm">R. Joaquim Caetano da Silva, 680</p>
+              <p class="text-primary-600 text-sm">Oiapoque - AP, 68980-000</p>
             </div>
           </div>
 
@@ -149,7 +150,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-bold text-primary-800">Endereço</h4>
-                  <p class="text-primary-700">Centro, Oiapoque - AP<br>Brasil</p>
+                  <p class="text-primary-700">R. Joaquim Caetano da Silva, 680<br>Oiapoque - AP, 68980-000</p>
                 </div>
               </div>
             </div>
