@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-2xl p-8 shadow-2xl border border-gray-200">
     <h2 class="text-3xl font-bold text-primary-800 mb-6 text-center">
-      Calculadora de Portas
+      Calculadora de Móveis
     </h2>
     <p class="text-primary-700 mb-8 text-center">
       Calcule o valor estimado da sua encomenda
@@ -19,7 +19,7 @@
           type="number"
           step="0.01"
           class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90"
-          placeholder="Tipo: 0.00"
+          placeholder="Ex: 1.50"
         >
       </div>
 
@@ -34,7 +34,7 @@
           type="number"
           step="0.01"
           class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90"
-          placeholder="Tipo: 0.00"
+          placeholder="Ex: 2.00"
         >
       </div>
 
@@ -44,7 +44,6 @@
         <p class="text-2xl font-bold text-primary-800">R$ {{ ((result || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</p>
         <p class="text-sm text-primary-600 mt-2">
           Área: {{ ((area || 0)).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} m²
-          <span v-if="extra > 0">+ R$ {{ ((extra || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }} (largura ≥ 1m)</span>
         </p>
       </div>
     </div>
@@ -55,20 +54,17 @@
 import { ref, computed } from 'vue'
 import { ArrowsRightLeftIcon, ArrowsUpDownIcon } from '@heroicons/vue/24/outline'
 
-// Dados reativos para Portas
+// Dados reativos para Móveis
 const width = ref(0)
 const height = ref(0)
 
-// Cálculo da área para Portas
+// Cálculo da área para Móveis
 const area = computed(() => width.value * height.value)
 
-// Extra para portas (se largura >= 1m)
-const extra = computed(() => width.value >= 1 ? 200 : 0)
-
-// Resultado final para Portas
+// Resultado final para Móveis
 const result = computed(() => {
   if (width.value > 0 && height.value > 0) {
-    return (area.value * 700) + extra.value
+    return area.value * 1700
   }
   return null
 })

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <ProductDetailsSection />
+    <DoorDetailsSection />
   </div>
 </template>
 
 <script setup>
-import ProductDetailsSection from '~/components/ProductDetailsSection.vue'
+import DoorDetailsSection from '~/components/DoorDetailsSection.vue'
 </script>
