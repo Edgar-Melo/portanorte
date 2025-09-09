@@ -87,5 +87,4 @@ useHead({
 
 <style scoped>
 /* Estilos adicionais se necessário */
-</style></content>
-<parameter name="filePath">c:\portanorte\app\pages\portas.vue
+</style>
