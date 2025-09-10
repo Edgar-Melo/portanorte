@@ -28,7 +28,7 @@
           <p class="text-xl mb-6 text-primary-700 text-justify">
             Temos soluções personalizadas para todas as suas necessidades em madeira.
           </p>
-          <ButtonPrimary @click="$router.push('/encomendas')">
+          <ButtonPrimary @click="openWhatsApp">
             Fale Conosco
           </ButtonPrimary>
         </div>
@@ -46,6 +46,13 @@ import KitchenCard from '~/components/KitchenCard.vue'
 import BedroomCard from '~/components/BedroomCard.vue'
 import OfficeCard from '~/components/OfficeCard.vue'
 import BathroomCard from '~/components/BathroomCard.vue'
+
+const openWhatsApp = () => {
+  const phoneNumber = '5596981379746'
+  const message = 'Olá! Gostaria de saber mais sobre os produtos da Porta Norte.'
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  window.open(whatsappUrl, '_blank')
+}
 </script>
 
 <style scoped>

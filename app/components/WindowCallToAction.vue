@@ -5,7 +5,7 @@
       <p class="text-xl mb-6 text-primary-700">
         Temos opções personalizadas para qualquer necessidade. Entre em contato para um orçamento sob medida.
       </p>
-      <ButtonPrimary @click="$router.push('/encomendas-janelas')">
+      <ButtonPrimary @click="openWhatsApp">
         Fale Conosco
       </ButtonPrimary>
     </div>
@@ -14,4 +14,11 @@
 
 <script setup>
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
+
+const openWhatsApp = () => {
+  const phoneNumber = '5596981379746'
+  const message = 'Olá! Gostaria de saber mais sobre as janelas da Porta Norte.'
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  window.open(whatsappUrl, '_blank')
+}
 </script>

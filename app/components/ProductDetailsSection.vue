@@ -272,7 +272,7 @@
             Temos opções personalizadas de móveis de sala para qualquer necessidade.
             Entre em contato para um orçamento sob medida.
           </p>
-          <ButtonPrimary @click="$router.push('/encomendas')">
+          <ButtonPrimary @click="openWhatsApp">
             Fale Conosco
           </ButtonPrimary>
         </div>
@@ -285,6 +285,13 @@
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
 import { HomeIcon } from '@heroicons/vue/24/outline'
+
+const openWhatsApp = () => {
+  const phoneNumber = '5596981379746'
+  const message = 'Olá! Gostaria de saber mais sobre os móveis da Porta Norte.'
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  window.open(whatsappUrl, '_blank')
+}
 </script>
 
 <style scoped>

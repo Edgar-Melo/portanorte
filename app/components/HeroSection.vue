@@ -18,7 +18,7 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-6">
             <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="scrollToProducts">Ver Produtos</ButtonPrimary>
-            <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="$router.push('/encomendas')">Fale Conosco</ButtonSecondary>
+            <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="openWhatsApp">Fale Conosco</ButtonSecondary>
           </div>
         </div>
 
@@ -44,6 +44,13 @@ const scrollToProducts = () => {
       block: 'start'
     })
   }
+}
+
+const openWhatsApp = () => {
+  const phoneNumber = '5596981379746'
+  const message = 'Olá! Gostaria de saber mais sobre os produtos da Porta Norte.'
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  window.open(whatsappUrl, '_blank')
 }
 </script>
 

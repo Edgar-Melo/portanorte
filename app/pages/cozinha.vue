@@ -223,7 +223,7 @@
             <p class="text-xl mb-6 text-primary-700">
               Temos opções personalizadas para qualquer necessidade. Entre em contato para um orçamento sob medida.
             </p>
-            <NuxtLink to="/encomendas-cozinha" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Fale Conosco</NuxtLink>
+            <button @click="openWhatsApp" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Fale Conosco</button>
           </div>
         </div>
       </div>
@@ -233,6 +233,13 @@
 
 <script setup>
 import { BuildingStorefrontIcon } from '@heroicons/vue/24/outline'
+
+const openWhatsApp = () => {
+  const phoneNumber = '5596981379746'
+  const message = 'Olá! Gostaria de saber mais sobre os móveis para cozinha da Porta Norte.'
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  window.open(whatsappUrl, '_blank')
+}
 </script>
 
 <style scoped>
