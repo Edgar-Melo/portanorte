@@ -44,7 +44,7 @@
         <p class="text-2xl font-bold text-primary-800">R$ {{ ((result || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}</p>
         <p class="text-sm text-primary-600 mt-2">
           Área: {{ ((area || 0)).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }} m²
-          <span v-if="extra > 0">+ R$ {{ ((extra || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }} (largura ≥ 1m)</span>
+          <span v-if="extra > 0" style="display: none">+ R$ {{ ((extra || 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }} (largura ≥ 1m)</span>
         </p>
       </div>
     </div>

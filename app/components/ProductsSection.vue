@@ -24,7 +24,7 @@
               Variedade de estilos e tamanhos para todos os ambientes.
             </p>
           </div>
-          <button class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full" @click="$router.push('/produtos')">Ver Detalhes</button>
+          <NuxtLink to="/portas" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Ver Detalhes</NuxtLink>
         </div>
 
         <!-- Janelas -->
@@ -39,7 +39,7 @@
               Iluminação natural e ventilação perfeita para seu conforto.
             </p>
           </div>
-          <button class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full" @click="$router.push('/produtos')">Ver Detalhes</button>
+          <button class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full" @click="$router.push('/janelas')">Ver Detalhes</button>
         </div>
 
         <!-- Sala -->

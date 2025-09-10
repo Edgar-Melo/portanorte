@@ -272,7 +272,7 @@
             Temos opções personalizadas para qualquer necessidade.
             Entre em contato para um orçamento sob medida.
           </p>
-          <ButtonPrimary @click="$router.push('/portas')">
+          <ButtonPrimary @click="$router.push('/encomendas')">
             Fale Conosco
           </ButtonPrimary>
         </div>
