@@ -1,11 +1,11 @@
 <template>
   <div>
-    <WindowOrderPage />
+    <DoorOrderPage />
   </div>
 </template>
 
 <script setup>
-import WindowOrderPage from '~/components/WindowOrderPage.vue'
+import DoorOrderPage from '~/components/DoorOrderPage.vue'
 </script>
 
 <style scoped>

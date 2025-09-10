@@ -49,7 +49,7 @@
             </div>
 
             <!-- Botão -->
-            <button @click="$router.push('/encomendas')" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</button>
+            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
           </div>
         </div>
 
@@ -91,7 +91,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
           </div>
         </div>
 
@@ -133,7 +133,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
           </div>
         </div>
 
@@ -175,7 +175,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
           </div>
         </div>
 
@@ -259,7 +259,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
           </div>
         </div>
       </div>
@@ -272,7 +272,7 @@
             Temos opções personalizadas para qualquer necessidade.
             Entre em contato para um orçamento sob medida.
           </p>
-          <ButtonPrimary @click="$router.push('/encomendas')">
+          <ButtonPrimary @click="$router.push('/encomendas-portas')">
             Fale Conosco
           </ButtonPrimary>
         </div>

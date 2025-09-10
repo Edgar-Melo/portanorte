@@ -25,7 +25,7 @@
           <div class="text-3xl font-bold text-primary-800 mb-2">R$ 800,00</div>
           <div class="text-sm text-primary-600">à vista ou parcelado</div>
         </div>
-        <NuxtLink to="/encomendas" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
+        <NuxtLink to="/encomendas-janelas" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
       </div>
     </div>
     <!-- Janela Modelo 2 -->
@@ -53,7 +53,7 @@
           <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.200,00</div>
           <div class="text-sm text-primary-600">à vista ou parcelado</div>
         </div>
-        <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+        <ButtonSecondary @click="$router.push('/encomendas-janelas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
       </div>
     </div>
     <!-- Janela Modelo 3 -->
@@ -81,7 +81,7 @@
           <div class="text-3xl font-bold text-primary-800 mb-2">R$ 600,00</div>
           <div class="text-sm text-primary-600">à vista ou parcelado</div>
         </div>
-        <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+        <ButtonSecondary @click="$router.push('/encomendas-janelas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
       </div>
     </div>
     <!-- Janela Modelo 4 -->
@@ -109,7 +109,7 @@
           <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.000,00</div>
           <div class="text-sm text-primary-600">à vista ou parcelado</div>
         </div>
-        <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+        <ButtonSecondary @click="$router.push('/encomendas-janelas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
       </div>
     </div>
     <!-- Janela Modelo 5 -->
@@ -165,7 +165,7 @@
           <div class="text-3xl font-bold text-primary-800 mb-2">R$ 400,00</div>
           <div class="text-sm text-primary-600">à vista ou parcelado</div>
         </div>
-        <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+        <ButtonSecondary @click="$router.push('/encomendas-janelas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
       </div>
     </div>
   </div>
