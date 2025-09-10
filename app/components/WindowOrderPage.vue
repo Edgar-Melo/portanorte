@@ -158,7 +158,7 @@
               </div>
 
               <!-- Informações de Contato -->
-              <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
+              <div id="call-to-action-encomendas" class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
                 <div class="flex items-start space-x-4">
                   <div class="bg-primary-200 rounded-full p-3">
                     <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@
                       Entre em contato conosco para tirar suas dúvidas sobre janelas:
                     </p>
                     <p class="text-primary-800 font-semibold">
-                      📞 (96) 98426-3674<br>
+                      📞 (96) 98137-9746<br>
                       📧 contato@portanorte.com.br
                     </p>
                   </div>

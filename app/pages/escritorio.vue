@@ -201,7 +201,7 @@
         </div>
 
         <!-- Call to Action -->
-        <div class="text-center">
+        <div id="call-to-action-escritorio" class="text-center">
           <h3 class="text-3xl font-bold text-primary-800 mb-4">Pronto para transformar seu escritório?</h3>
           <p class="text-xl text-primary-700 mb-8 max-w-2xl mx-auto">
             Entre em contato conosco e solicite uma cotação personalizada para seus móveis de escritório.

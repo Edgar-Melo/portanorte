@@ -1,7 +1,7 @@
 <template>
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
+      <div id="contato-section" class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
           Entre em Contato
         </h2>
@@ -125,7 +125,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-bold text-primary-800">Telefone</h4>
-                  <p class="text-primary-700">(96) 98426-3674</p>
+                  <p class="text-primary-700">(96) 98137-9746</p>
                 </div>
               </div>
 

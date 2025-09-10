@@ -171,7 +171,7 @@
                       Entre em contato conosco para tirar suas dúvidas sobre móveis:
                     </p>
                     <p class="text-primary-800 font-semibold">
-                      📞 (96) 98426-3674<br>
+                      📞 (96) 98137-9746<br>
                       📧 contato@portanorte.com.br
                     </p>
                   </div>
