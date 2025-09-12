@@ -32,7 +32,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <HomeIcon class="w-16 h-16 text-primary-800" />
+          <img src="/img/Porta-Angelik-Horizonte.jpg" alt="Porta de Correr" class="w-full h-full object-cover rounded-xl">
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Correr</h3>
         <div class="space-y-3 mb-6">
@@ -60,7 +60,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <HomeIcon class="w-16 h-16 text-primary-800" />
+          <img src="/img/Porta-Angelik-Horizonte.jpg" alt="Porta Pivotante" class="w-full h-full object-cover rounded-xl">
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Pivotante</h3>
         <div class="space-y-3 mb-6">
@@ -116,7 +116,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <HomeIcon class="w-16 h-16 text-primary-800" />
+          <img src="/img/Porta-Angelik-Horizonte.jpg" alt="Porta com Vidro" class="w-full h-full object-cover rounded-xl">
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta com Vidro</h3>
         <div class="space-y-3 mb-6">
@@ -144,7 +144,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <HomeIcon class="w-16 h-16 text-primary-800" />
+          <img src="/img/Porta-Angelik-Horizonte.jpg" alt="Porta de Serviço" class="w-full h-full object-cover rounded-xl">
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Serviço</h3>
         <div class="space-y-3 mb-6">
