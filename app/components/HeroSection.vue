@@ -24,7 +24,7 @@
 
         <!-- Lado direito: Imagem do Moveleiro -->
         <div class="flex justify-center lg:justify-end animate-slide-in-right">
-          <img src="/img/Marceneiro.png" alt="Marceneiro da Porta Norte" class="w-full max-w-lg h-80 object-cover rounded-2xl shadow-2xl border border-gray-200">
+          <img src="/img/marceneiro-portanorte.png" alt="Marceneiro da Porta Norte" class="w-full max-w-lg h-80 object-cover rounded-2xl shadow-2xl border border-gray-200">
         </div>
       </div>
     </div>
