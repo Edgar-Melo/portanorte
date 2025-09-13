@@ -272,8 +272,8 @@
             Temos opções personalizadas de móveis de sala para qualquer necessidade.
             Entre em contato para um orçamento sob medida.
           </p>
-          <ButtonPrimary @click="openWhatsApp">
-            Fale Conosco
+          <ButtonPrimary @click="$router.push('/encomendas-sala')">
+            Faça um Orçamento
           </ButtonPrimary>
         </div>
       </div>

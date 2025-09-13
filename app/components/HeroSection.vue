@@ -18,7 +18,7 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-6">
             <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="scrollToProducts">Ver Produtos</ButtonPrimary>
-            <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="openWhatsApp">Fale Conosco</ButtonSecondary>
+            <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="$router.push('/encomendas')">Faça um Orçamento</ButtonSecondary>
           </div>
         </div>
 

@@ -5,8 +5,8 @@
       <p class="text-xl mb-6 text-primary-700">
         Temos opções personalizadas para qualquer necessidade. Entre em contato para um orçamento sob medida.
       </p>
-      <ButtonPrimary @click="openWhatsApp">
-        Fale Conosco
+      <ButtonPrimary @click="$router.push('/encomendas-janelas')">
+        Faça um Orçamento
       </ButtonPrimary>
     </div>
   </div>

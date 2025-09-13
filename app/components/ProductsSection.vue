@@ -28,8 +28,8 @@
           <p class="text-xl mb-6 text-primary-700 text-justify">
             Temos soluções personalizadas para todas as suas necessidades em madeira.
           </p>
-          <ButtonPrimary @click="openWhatsApp">
-            Fale Conosco
+          <ButtonPrimary @click="$router.push('/encomendas')">
+            Faça um Orçamento
           </ButtonPrimary>
         </div>
       </div>

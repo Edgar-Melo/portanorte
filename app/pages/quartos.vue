@@ -223,7 +223,7 @@
             <p class="text-xl mb-6 text-primary-700">
               Temos opções personalizadas para qualquer necessidade. Entre em contato para um orçamento sob medida.
             </p>
-            <button @click="openWhatsApp" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Fale Conosco</button>
+            <button @click="$router.push('/encomendas-quartos')" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Faça um Orçamento</button>
           </div>
         </div>
       </div>
