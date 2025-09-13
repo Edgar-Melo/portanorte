@@ -3,8 +3,8 @@
     <!-- Janela Modelo 1 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-residencial.jpg" alt="Janela Residencial" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela Residencial</h3>
         <div class="space-y-3 mb-6">
@@ -31,8 +31,8 @@
     <!-- Janela Modelo 2 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-correr.jpg" alt="Janela de Correr" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela de Correr</h3>
         <div class="space-y-3 mb-6">
@@ -59,8 +59,8 @@
     <!-- Janela Modelo 3 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-basculante.jpg" alt="Janela Basculante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela Basculante</h3>
         <div class="space-y-3 mb-6">
@@ -87,8 +87,8 @@
     <!-- Janela Modelo 4 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-vidro.jpg" alt="Janela com Vidro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela com Vidro</h3>
         <div class="space-y-3 mb-6">
@@ -115,8 +115,8 @@
     <!-- Janela Modelo 5 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-francesa.jpg" alt="Janela Francesa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela Francesa</h3>
         <div class="space-y-3 mb-6">
@@ -143,8 +143,8 @@
     <!-- Janela Modelo 6 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-          <WindowIcon class="w-16 h-16 text-primary-800" />
+        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+          <img src="/img/placeholder-janela-servico.jpg" alt="Janela de Serviço" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela de Serviço</h3>
         <div class="space-y-3 mb-6">
@@ -172,6 +172,5 @@
 </template>
 
 <script setup>
-import { WindowIcon } from '@heroicons/vue/24/outline'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
 </script>
