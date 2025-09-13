@@ -15,8 +15,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-armario-cozinha.jpg" alt="Armário de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Armário de Cozinha</h3>
@@ -49,8 +49,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-mesa-cozinha.jpg" alt="Mesa de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Cozinha</h3>
@@ -83,8 +83,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-balcao-cozinha.jpg" alt="Balcão de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Balcão de Cozinha</h3>
@@ -117,8 +117,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-cadeira-cozinha.jpg" alt="Cadeira de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Cadeira de Cozinha</h3>
@@ -151,8 +151,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-despensa.jpg" alt="Despensa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Despensa</h3>
@@ -185,8 +185,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <BuildingStorefrontIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-carrinho-cozinha.jpg" alt="Carrinho de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Carrinho de Cozinha</h3>
@@ -232,14 +232,12 @@
 </template>
 
 <script setup>
-import { BuildingStorefrontIcon } from '@heroicons/vue/24/outline'
-
-const openWhatsApp = () => {
-  const phoneNumber = '5596981379746'
-  const message = 'Olá! Gostaria de saber mais sobre os móveis para cozinha da Porta Norte.'
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-  window.open(whatsappUrl, '_blank')
-}
+// const openWhatsApp = () => {
+//   const phoneNumber = '5596981379746'
+//   const message = 'Olá! Gostaria de saber mais sobre os móveis para cozinha da Porta Norte.'
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+//   window.open(whatsappUrl, '_blank')
+// }
 </script>
 
 <style scoped>

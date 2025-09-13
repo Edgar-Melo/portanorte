@@ -15,8 +15,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-sofa.jpg" alt="Sofá 3 Lugares" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Sofá 3 Lugares</h3>
@@ -49,8 +49,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-mesa-centro.jpg" alt="Mesa de Centro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Centro</h3>
@@ -83,8 +83,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-estante.jpg" alt="Estante Modular" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Estante Modular</h3>
@@ -117,8 +117,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-poltrona.jpg" alt="Poltrona" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Poltrona</h3>
@@ -151,8 +151,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-mesa-lateral.jpg" alt="Mesa Lateral" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa Lateral</h3>
@@ -185,8 +185,8 @@
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-                <HomeIcon class="w-16 h-16 text-primary-800" />
+              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
+                <img src="/img/placeholder-rack-tv.jpg" alt="Rack para TV" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Rack para TV</h3>
@@ -232,14 +232,12 @@
 </template>
 
 <script setup>
-import { HomeIcon } from '@heroicons/vue/24/outline'
-
-const openWhatsApp = () => {
-  const phoneNumber = '5596981379746'
-  const message = 'Olá! Gostaria de saber mais sobre os móveis para sala da Porta Norte.'
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-  window.open(whatsappUrl, '_blank')
-}
+// const openWhatsApp = () => {
+//   const phoneNumber = '5596981379746'
+//   const message = 'Olá! Gostaria de saber mais sobre os móveis para sala da Porta Norte.'
+//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+//   window.open(whatsappUrl, '_blank')
+// }
 </script>
 
 <style scoped>
