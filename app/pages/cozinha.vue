@@ -16,7 +16,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-armario-cozinha.jpg" alt="Armário de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=13" alt="Armário de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Armário de Cozinha</h3>
@@ -50,7 +50,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-mesa-cozinha.jpg" alt="Mesa de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=14" alt="Mesa de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Cozinha</h3>
@@ -84,7 +84,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-balcao-cozinha.jpg" alt="Balcão de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=15" alt="Balcão de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Balcão de Cozinha</h3>
@@ -118,7 +118,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-cadeira-cozinha.jpg" alt="Cadeira de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=16" alt="Cadeira de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Cadeira de Cozinha</h3>
@@ -152,7 +152,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-despensa.jpg" alt="Despensa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=17" alt="Despensa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Despensa</h3>
@@ -186,7 +186,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-carrinho-cozinha.jpg" alt="Carrinho de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=18" alt="Carrinho de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Carrinho de Cozinha</h3>

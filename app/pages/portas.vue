@@ -15,8 +15,38 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="/img/Porta-Angelik-Horizonte.png" alt="Porta Residencial" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            <div
+              ref="portaContainer"
+              class="porta-zoom-container w-full h-64 overflow-hidden rounded-xl mb-6 bg-gray-50 relative"
+              @mouseenter="showMagnifier"
+              @mouseleave="hideMagnifier"
+              @mousemove="updateMagnifier"
+              @touchstart="showMagnifier"
+              @touchmove="updateMagnifier"
+              @touchend="hideMagnifier"
+            >
+              <img
+                ref="portaResidencialImg"
+                src="/img/Porta-Angelik-Horizonte.png"
+                alt="Porta Residencial"
+                class="porta-zoom-image w-full h-full object-contain"
+              />
+
+              <!-- Lupa circular -->
+              <div
+                ref="magnifier"
+                class="magnifier"
+                :style="magnifierStyle"
+                v-show="showMagnifierGlass"
+              >
+                <img
+                  ref="magnifierImg"
+                  src="/img/Porta-Angelik-Horizonte.png"
+                  alt="Porta Residencial Ampliada"
+                  class="magnifier-image"
+                  :style="magnifierImageStyle"
+                />
+              </div>
             </div>
 
             <!-- Nome da porta -->
@@ -285,14 +315,194 @@
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
 
+// Referências para a lupa
+const portaContainer = ref(null)
+const portaResidencialImg = ref(null)
+const magnifier = ref(null)
+const magnifierImg = ref(null)
+
+// Estado da lupa
+const showMagnifierGlass = ref(false)
+const magnifierStyle = ref({})
+const magnifierImageStyle = ref({})
+const imageLoaded = ref(false)
+
+// Configurações da lupa
+const magnifierSize = 150 // Tamanho da lupa em pixels
+const zoomLevel = 2 // Nível de zoom
+
+// Verificar se a imagem está carregada
+const checkImageLoaded = () => {
+  if (portaResidencialImg.value && portaResidencialImg.value.complete) {
+    imageLoaded.value = true
+  }
+}
+
+// Função para mostrar a lupa
+const showMagnifier = (event) => {
+  // Verificar se a imagem está carregada, se não estiver, tentar mostrar mesmo assim
+  if (portaResidencialImg.value && portaResidencialImg.value.complete) {
+    imageLoaded.value = true
+  }
+
+  // Mostrar a lupa mesmo se a imagem não estiver totalmente carregada
+  showMagnifierGlass.value = true
+
+  // Se temos um evento, atualizar imediatamente a posição
+  if (event) {
+    updateMagnifier(event)
+  }
+}
+
+// Função para esconder a lupa
+const hideMagnifier = () => {
+  showMagnifierGlass.value = false
+}
+
+// Função para atualizar a posição da lupa
+const updateMagnifier = (event) => {
+  if (!portaContainer.value || !portaResidencialImg.value || !showMagnifierGlass.value || !imageLoaded.value) return
+
+  const container = portaContainer.value
+  const img = portaResidencialImg.value
+
+  // Obter as dimensões e posição do container
+  const containerRect = container.getBoundingClientRect()
+
+  // Calcular a posição do mouse/touch relativa ao container
+  let clientX, clientY
+  if (event.touches && event.touches.length > 0) {
+    // Touch event
+    clientX = event.touches[0].clientX
+    clientY = event.touches[0].clientY
+  } else {
+    // Mouse event
+    clientX = event.clientX
+    clientY = event.clientY
+  }
+
+  const mouseX = clientX - containerRect.left
+  const mouseY = clientY - containerRect.top
+
+  // Verificar se o mouse/touch está dentro do container
+  if (mouseX < 0 || mouseX > containerRect.width || mouseY < 0 || mouseY > containerRect.height) {
+    hideMagnifier()
+    return
+  }
+
+  // Calcular a posição da lupa (centralizada no mouse/touch)
+  let magnifierX = mouseX - magnifierSize / 2
+  let magnifierY = mouseY - magnifierSize / 2
+
+  // Restringir a lupa aos limites do container
+  magnifierX = Math.max(0, Math.min(magnifierX, containerRect.width - magnifierSize))
+  magnifierY = Math.max(0, Math.min(magnifierY, containerRect.height - magnifierSize))
+
+  // Calcular a porcentagem da posição do mouse no container (0-1)
+  const percentX = mouseX / containerRect.width
+  const percentY = mouseY / containerRect.height
+
+  // Calcular o deslocamento da imagem ampliada
+  // Para zoom de 2x, precisamos mover a imagem para mostrar a área correta
+  const offsetX = percentX * containerRect.width
+  const offsetY = percentY * containerRect.height
+
+  // Atualizar os estilos
+  magnifierStyle.value = {
+    left: `${magnifierX}px`,
+    top: `${magnifierY}px`,
+    width: `${magnifierSize}px`,
+    height: `${magnifierSize}px`,
+    position: 'absolute',
+    zIndex: '1000'
+  }
+
+  magnifierImageStyle.value = {
+    transform: `scale(${zoomLevel}) translate(${-offsetX}px, ${-offsetY}px)`,
+    transformOrigin: 'top left',
+    width: `${containerRect.width}px`,
+    height: `${containerRect.height}px`
+  }
+}
+
 const openWhatsApp = () => {
   const phoneNumber = '5596981379746'
   const message = 'Olá! Gostaria de saber mais sobre as portas da Porta Norte.'
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
   window.open(whatsappUrl, '_blank')
 }
+
+// Configurar event listeners quando o componente for montado
+onMounted(() => {
+  if (portaResidencialImg.value) {
+    // Verificar se a imagem já está carregada
+    if (portaResidencialImg.value.complete) {
+      imageLoaded.value = true
+    } else {
+      // Aguardar o carregamento da imagem
+      portaResidencialImg.value.addEventListener('load', () => {
+        imageLoaded.value = true
+      })
+    }
+  }
+})
 </script>
 
 <style scoped>
-/* Estilos adicionais se necessário */
+/* Estilos para o container da imagem */
+.porta-zoom-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: default;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.porta-zoom-image {
+  transition: opacity 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Estilos da lupa circular */
+.magnifier {
+  position: absolute !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.magnifier-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  transition: none;
+  border-radius: 50%;
+}
+
+/* Animações suaves */
+.magnifier {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.porta-zoom-container:hover .porta-zoom-image {
+  opacity: 0.8;
+}
 </style>

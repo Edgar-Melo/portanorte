@@ -33,7 +33,7 @@
           <!-- Armário de Banheiro -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-armario-banheiro.jpg" alt="Armário de Banheiro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=19" alt="Armário de Banheiro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Armário de Banheiro</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -53,7 +53,7 @@
           <!-- Espelho com Nicho -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-espelho-nicho.jpg" alt="Espelho com Nicho" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=20" alt="Espelho com Nicho" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Espelho com Nicho</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -73,7 +73,7 @@
           <!-- Prateleira de Canto -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-prateleira-canto.jpg" alt="Prateleira de Canto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=21" alt="Prateleira de Canto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Prateleira de Canto</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -93,7 +93,7 @@
           <!-- Cabideiro de Parede -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-cabideiro-parede.jpg" alt="Cabideiro de Parede" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=22" alt="Cabideiro de Parede" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Cabideiro de Parede</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -113,7 +113,7 @@
           <!-- Bancada com Pia -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-bancada-pia.jpg" alt="Bancada com Pia" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=23" alt="Bancada com Pia" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Bancada com Pia</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -133,7 +133,7 @@
           <!-- Porta Toalhas -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-porta-toalhas.jpg" alt="Porta Toalhas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=24" alt="Porta Toalhas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Porta Toalhas</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">

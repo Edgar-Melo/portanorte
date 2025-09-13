@@ -33,7 +33,7 @@
           <!-- Mesa de Escritório -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-mesa-escritorio.jpg" alt="Mesa de Escritório" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=25" alt="Mesa de Escritório" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Mesa de Escritório</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -53,7 +53,7 @@
           <!-- Cadeira de Escritório -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-cadeira-escritorio.jpg" alt="Cadeira de Escritório" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=26" alt="Cadeira de Escritório" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Cadeira de Escritório</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -73,7 +73,7 @@
           <!-- Estante para Livros -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-estante-livros.jpg" alt="Estante para Livros" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=27" alt="Estante para Livros" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Estante para Livros</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -93,7 +93,7 @@
           <!-- Armário Arquivo -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-armario-arquivo.jpg" alt="Armário Arquivo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=28" alt="Armário Arquivo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Armário Arquivo</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -113,7 +113,7 @@
           <!-- Mesa Auxiliar -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-mesa-auxiliar.jpg" alt="Mesa Auxiliar" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=29" alt="Mesa Auxiliar" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Mesa Auxiliar</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">
@@ -133,7 +133,7 @@
           <!-- Suporte para Monitor -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
             <div class="w-full h-32 bg-primary-200 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-              <img src="/img/placeholder-suporte-monitor.jpg" alt="Suporte para Monitor" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="https://picsum.photos/400/300?random=30" alt="Suporte para Monitor" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
             <h3 class="text-xl font-bold text-primary-800 mb-2">Suporte para Monitor</h3>
             <p class="text-primary-700 mb-4 text-sm leading-relaxed">

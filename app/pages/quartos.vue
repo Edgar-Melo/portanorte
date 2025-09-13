@@ -16,7 +16,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-cama-casal.jpg" alt="Cama de Casal" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=7" alt="Cama de Casal" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Cama de Casal</h3>
@@ -50,7 +50,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-guarda-roupa.jpg" alt="Guarda-Roupa 4 Portas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=8" alt="Guarda-Roupa 4 Portas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Guarda-Roupa 4 Portas</h3>
@@ -84,7 +84,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-mesa-cabeceira.jpg" alt="Mesa de Cabeceira" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=9" alt="Mesa de Cabeceira" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Cabeceira</h3>
@@ -118,7 +118,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-comoda.jpg" alt="Cômoda 6 Gavetas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=10" alt="Cômoda 6 Gavetas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Cômoda 6 Gavetas</h3>
@@ -152,7 +152,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-espelho.jpg" alt="Espelho para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=11" alt="Espelho para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Espelho para Quarto</h3>
@@ -186,7 +186,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="/img/placeholder-banqueta.jpg" alt="Banqueta para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <img src="https://picsum.photos/400/300?random=12" alt="Banqueta para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Banqueta para Quarto</h3>
