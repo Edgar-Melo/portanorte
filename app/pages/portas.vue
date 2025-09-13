@@ -15,7 +15,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="/img/Porta-Angelik-Horizonte.png" alt="Porta Residencial" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="/img/Porta-Angelik-Horizonte.png" alt="Porta Residencial" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Residencial</h3>
@@ -55,7 +57,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="" alt="Porta de Correr" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="" alt="Porta de Correr" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Correr</h3>
@@ -95,7 +99,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="" alt="Porta Pivotante" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="" alt="Porta Pivotante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Pivotante</h3>
@@ -135,7 +141,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="" alt="Porta de Madeira Maciça" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="" alt="Porta de Madeira Maciça" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Madeira Maciça</h3>
@@ -175,7 +183,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="" alt="Porta com Vidro" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="" alt="Porta com Vidro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta com Vidro</h3>
@@ -215,7 +225,9 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <img src="" alt="Porta de Serviço" class="w-full h-48 object-cover rounded-xl mb-6" />
+            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
+              <img src="" alt="Porta de Serviço" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            </div>
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Serviço</h3>
