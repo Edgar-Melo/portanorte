@@ -15,9 +15,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="/img/Porta-Angelik-Horizonte.png" alt="Porta Residencial" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Residencial</h3>
@@ -57,9 +55,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="" alt="Porta de Correr" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Correr</h3>
@@ -99,9 +95,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="" alt="Porta Pivotante" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Pivotante</h3>
@@ -141,9 +135,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="" alt="Porta de Madeira Maciça" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Madeira Maciça</h3>
@@ -183,9 +175,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="" alt="Porta com Vidro" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta com Vidro</h3>
@@ -225,9 +215,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center">
-              <HomeIcon class="w-16 h-16 text-primary-800" />
-            </div>
+            <img src="" alt="Porta de Serviço" class="w-full h-48 object-cover rounded-xl mb-6" />
 
             <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Serviço</h3>
@@ -284,7 +272,6 @@
 <script setup>
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
-import { HomeIcon } from '@heroicons/vue/24/outline'
 
 const openWhatsApp = () => {
   const phoneNumber = '5596981379746'
