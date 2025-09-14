@@ -89,7 +89,7 @@
                   <span>Valor base (R$ 700,00/m²):</span>
                   <span>R$ {{ valorBase.toFixed(2) }}</span>
                 </div>
-                <div v-if="larguraSelecionada.value >= 1" class="flex justify-between">
+                <div v-if="larguraSelecionada.value >= 1" class="flex justify-between invisible">
                   <span>Adicional para ≥ 1m:</span>
                   <span>R$ 200,00</span>
                 </div>
