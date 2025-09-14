@@ -50,7 +50,7 @@
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Residencial</h3>
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelik-Horizonte</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -59,8 +59,8 @@
                 <span class="text-primary-800 font-semibold">2.10m</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">0.80m</span>
+                <span class="text-primary-600 font-medium">Larguras:</span>
+                <span class="text-primary-800 font-semibold">0.80cm, 0.83cm, 0.93cm, 1.00M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -79,7 +79,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-angelik')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
