@@ -68,16 +68,6 @@
               </div>
             </div>
 
-            <!-- Preço -->
-            <div class="mb-6">
-              <div class="text-3xl font-bold text-primary-800 mb-2">
-                R$ 1.200,00
-              </div>
-              <div class="text-sm text-primary-600">
-                à vista ou parcelado
-              </div>
-            </div>
-
             <!-- Botão -->
             <ButtonPrimary @click="$router.push('/encomenda-porta-angelik')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
