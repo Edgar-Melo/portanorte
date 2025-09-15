@@ -90,7 +90,7 @@
                   <span>R$ {{ valorBase.toFixed(2) }}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span>Adicional para todas as larguras:</span>
+                  <span>Completa: Porta + Batedor</span>
                   <span>R$ 200,00</span>
                 </div>
                 <hr class="my-2">
