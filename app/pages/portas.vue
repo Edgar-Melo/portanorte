@@ -130,7 +130,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonPrimary @click="$router.push('/encomenda-porta-angelik')" class="w-full">Comprar Agora</ButtonPrimary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-angelin-colonial')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 

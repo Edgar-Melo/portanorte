@@ -4,7 +4,7 @@
     <header class="bg-white border-b border-gray-200">
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <h1 class="text-2xl font-bold text-primary-800">Porta Norte - Porta Angelik Horizonte</h1>
+          <h1 class="text-2xl font-bold text-primary-800">Porta Norte - Porta-Angelin-Colonial</h1>
           <button
             @click="$router.push('/portas')"
             class="bg-primary-200 hover:bg-primary-300 text-primary-800 px-4 py-2 rounded-lg transition duration-300"
@@ -20,7 +20,7 @@
         <!-- Título da Página -->
         <div class="text-center mb-12">
           <h2 class="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
-            Porta Angelik Horizonte
+            Porta-Angelin-Colonial
           </h2>
           <p class="text-xl text-primary-700 max-w-3xl mx-auto leading-relaxed text-justify">
             Escolha a largura desejada e veja o valor final do seu produto personalizado.
@@ -35,8 +35,8 @@
             <!-- Imagem do Produto -->
             <div class="mb-6">
               <img
-                src="/img/Porta-Angelik-Horizonte.png"
-                alt="Porta Angelik Horizonte"
+                src="/img/Porta-Angelin-Colonial.jpg"
+                alt="Porta-Angelin-Colonial"
                 class="w-full h-64 object-contain rounded-xl bg-gray-50"
               />
             </div>
@@ -45,7 +45,7 @@
             <div class="space-y-4 mb-6">
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Nome:</span>
-                <span class="text-primary-800 font-semibold">Porta Angelik Horizonte</span>
+                <span class="text-primary-800 font-semibold">Porta-Angelin-Colonial</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Altura:</span>
@@ -221,7 +221,7 @@ const submitOrder = () => {
   }
 
   // Aqui você pode implementar o envio para WhatsApp ou backend
-  const mensagem = `Olá! Gostaria de encomendar uma Porta Angelik Horizonte com as seguintes especificações:
+  const mensagem = `Olá! Gostaria de encomendar uma Porta-Angelin-Colonial com as seguintes especificações:
 
 📏 Largura: ${larguraSelecionada.value.label}
 📏 Altura: ${altura}m
