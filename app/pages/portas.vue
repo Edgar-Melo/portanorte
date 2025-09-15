@@ -60,7 +60,7 @@
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Larguras:</span>
-                <span class="text-primary-800 font-semibold">0.80cm, 0.83cm, 0.93cm, 1.00M</span>
+                <span class="text-primary-800 font-semibold text-sm">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -77,12 +77,41 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="" alt="Porta de Correr" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            <div 
+              ref="portaCorrerContainer"
+              class="porta-zoom-container h-64"
+              @mouseenter="showPortaCorrerMagnifierFunc"
+              @mouseleave="hidePortaCorrerMagnifierFunc"
+              @mousemove="updatePortaCorrerMagnifierFunc"
+              @touchstart="showPortaCorrerMagnifierFunc"
+              @touchend="hidePortaCorrerMagnifierFunc"
+              @touchmove="updatePortaCorrerMagnifierFunc"
+            >
+              <img 
+                ref="portaCorrerImg"
+                src="/img/Porta-Angelin-Colonial.jpg" 
+                alt="Porta de Correr" 
+                class="porta-zoom-image"
+                @load="checkPortaCorrerImageLoaded"
+              >
+              <div 
+                v-if="showPortaCorrerMagnifier"
+                ref="portaCorrerMagnifier"
+                class="magnifier"
+                :style="portaCorrerMagnifierStyle"
+              >
+                <img 
+                  ref="portaCorrerMagnifierImg"
+                  :src="portaCorrerImg?.src" 
+                  alt="Magnifier" 
+                  class="magnifier-image"
+                  :style="portaCorrerMagnifierImageStyle"
+                >
+              </div>
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Correr</h3>
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelin-Colonial</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -91,8 +120,8 @@
                 <span class="text-primary-800 font-semibold">2.10m</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">1.20m</span>
+                <span class="text-primary-600 font-medium">Larguras:</span>
+                <span class="text-primary-800 font-semibold text-sm">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -100,18 +129,8 @@
               </div>
             </div>
 
-            <!-- Preço -->
-            <div class="mb-6">
-              <div class="text-3xl font-bold text-primary-800 mb-2">
-                R$ 1.800,00
-              </div>
-              <div class="text-sm text-primary-600">
-                à vista ou parcelado
-              </div>
-            </div>
-
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-angelik')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
@@ -311,11 +330,23 @@ const portaResidencialImg = ref(null)
 const magnifier = ref(null)
 const magnifierImg = ref(null)
 
+// Referências para Porta de Correr
+const portaCorrerContainer = ref(null)
+const portaCorrerImg = ref(null)
+const portaCorrerMagnifier = ref(null)
+const portaCorrerMagnifierImg = ref(null)
+
 // Estado da lupa
 const showMagnifierGlass = ref(false)
 const magnifierStyle = ref({})
 const magnifierImageStyle = ref({})
 const imageLoaded = ref(false)
+
+// Estado da lupa para Porta de Correr
+const showPortaCorrerMagnifier = ref(false)
+const portaCorrerMagnifierStyle = ref({})
+const portaCorrerMagnifierImageStyle = ref({})
+const portaCorrerImageLoaded = ref(false)
 
 // Configurações da lupa
 const magnifierSize = 150 // Tamanho da lupa em pixels
@@ -325,6 +356,13 @@ const zoomLevel = 2 // Nível de zoom
 const checkImageLoaded = () => {
   if (portaResidencialImg.value && portaResidencialImg.value.complete) {
     imageLoaded.value = true
+  }
+}
+
+// Verificar se a imagem da Porta de Correr está carregada
+const checkPortaCorrerImageLoaded = () => {
+  if (portaCorrerImg.value && portaCorrerImg.value.complete) {
+    portaCorrerImageLoaded.value = true
   }
 }
 
@@ -422,16 +460,92 @@ const openWhatsApp = () => {
   window.open(whatsappUrl, '_blank')
 }
 
+// Funções para Porta de Correr
+const showPortaCorrerMagnifierFunc = (event) => {
+  if (portaCorrerImg.value && portaCorrerImg.value.complete) {
+    portaCorrerImageLoaded.value = true
+  }
+  showPortaCorrerMagnifier.value = true
+  if (event) {
+    updatePortaCorrerMagnifier(event)
+  }
+}
+
+const hidePortaCorrerMagnifierFunc = () => {
+  showPortaCorrerMagnifier.value = false
+}
+
+const updatePortaCorrerMagnifierFunc = (event) => {
+  if (!portaCorrerContainer.value || !portaCorrerImg.value || !showPortaCorrerMagnifier.value || !portaCorrerImageLoaded.value) return
+
+  const container = portaCorrerContainer.value
+  const img = portaCorrerImg.value
+  const containerRect = container.getBoundingClientRect()
+
+  let clientX, clientY
+  if (event.touches && event.touches.length > 0) {
+    clientX = event.touches[0].clientX
+    clientY = event.touches[0].clientY
+  } else {
+    clientX = event.clientX
+    clientY = event.clientY
+  }
+
+  const mouseX = clientX - containerRect.left
+  const mouseY = clientY - containerRect.top
+
+  if (mouseX < 0 || mouseX > containerRect.width || mouseY < 0 || mouseY > containerRect.height) {
+    hidePortaCorrerMagnifier()
+    return
+  }
+
+  let magnifierX = mouseX - magnifierSize / 2
+  let magnifierY = mouseY - magnifierSize / 2
+
+  magnifierX = Math.max(0, Math.min(magnifierX, containerRect.width - magnifierSize))
+  magnifierY = Math.max(0, Math.min(magnifierY, containerRect.height - magnifierSize))
+
+  const percentX = mouseX / containerRect.width
+  const percentY = mouseY / containerRect.height
+
+  const offsetX = percentX * containerRect.width
+  const offsetY = percentY * containerRect.height
+
+  portaCorrerMagnifierStyle.value = {
+    left: `${magnifierX}px`,
+    top: `${magnifierY}px`,
+    width: `${magnifierSize}px`,
+    height: `${magnifierSize}px`,
+    position: 'absolute',
+    zIndex: '1000'
+  }
+
+  portaCorrerMagnifierImageStyle.value = {
+    transform: `scale(${zoomLevel}) translate(${-offsetX}px, ${-offsetY}px)`,
+    transformOrigin: 'top left',
+    width: `${containerRect.width}px`,
+    height: `${containerRect.height}px`
+  }
+}
+
 // Configurar event listeners quando o componente for montado
 onMounted(() => {
   if (portaResidencialImg.value) {
-    // Verificar se a imagem já está carregada
     if (portaResidencialImg.value.complete) {
       imageLoaded.value = true
     } else {
-      // Aguardar o carregamento da imagem
       portaResidencialImg.value.addEventListener('load', () => {
         imageLoaded.value = true
+      })
+    }
+  }
+
+  if (portaCorrerImg.value) {
+    if (portaCorrerImg.value.complete) {
+      portaCorrerImageLoaded.value = true
+    } else {
+      portaCorrerImg.value.addEventListener('load', () => {
+        portaCorrerImageLoaded.value = true
       })
     }
   }
