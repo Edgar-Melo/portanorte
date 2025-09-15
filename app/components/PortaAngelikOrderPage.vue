@@ -89,8 +89,8 @@
                   <span>Valor base (R$ 700,00/m²):</span>
                   <span>R$ {{ valorBase.toFixed(2) }}</span>
                 </div>
-                <div v-if="larguraSelecionada.value >= 1" class="flex justify-between invisible">
-                  <span>Adicional para ≥ 1m:</span>
+                <div class="flex justify-between">
+                  <span>Adicional para todas as larguras:</span>
                   <span>R$ 200,00</span>
                 </div>
                 <hr class="my-2">
@@ -203,7 +203,7 @@ const valorBase = computed(() => {
 
 const valorTotal = computed(() => {
   let total = valorBase.value
-  if (larguraSelecionada.value && larguraSelecionada.value.value >= 1) {
+  if (larguraSelecionada.value) {
     total += adicionalGrande
   }
   return total
