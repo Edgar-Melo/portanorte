@@ -89,7 +89,7 @@
             >
               <img 
                 ref="portaCorrerImg"
-                src="/img/Porta-Angelin-Colonial.jpg" 
+                src="/img/Porta-Angelin-Colonial.png" 
                 alt="Porta de Correr" 
                 class="porta-zoom-image"
                 @load="checkPortaCorrerImageLoaded"

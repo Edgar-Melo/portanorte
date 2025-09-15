@@ -35,7 +35,7 @@
             <!-- Imagem do Produto -->
             <div class="mb-6">
               <img
-                src="/img/Porta-Angelin-Colonial.jpg"
+                src="/img/Porta-Angelin-Colonial.png"
                 alt="Porta-Angelin-Colonial"
                 class="w-full h-64 object-contain rounded-xl bg-gray-50"
               />
