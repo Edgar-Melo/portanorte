@@ -90,8 +90,7 @@
                   <span>R$ {{ valorBase.toFixed(2) }}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span>Completa: Porta + Batedor</span>
-                  <span>R$ 200,00</span>
+                  <span>Completa: <strong>Porta + Batedor</strong></span>
                 </div>
                 <hr class="my-2">
                 <div class="flex justify-between font-bold text-lg">
