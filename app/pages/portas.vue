@@ -410,6 +410,7 @@ const portaPivotanteMagnifierImg = ref(null)
 const showImageModal = ref(false)
 const modalImageSrc = ref('')
 const modalImageAlt = ref('')
+const originalBodyOverflow = ref('')
 
 // Estado da lupa
 const showMagnifierGlass = ref(false)
@@ -543,11 +544,20 @@ const openWhatsApp = () => {
 
 // Funções do Modal de Imagem
 const openImageModal = (src, alt) => {
+  // Salvar estado original do overflow antes de alterar
+  originalBodyOverflow.value = document.body.style.overflow || ''
+
   modalImageSrc.value = src
   modalImageAlt.value = alt
   showImageModal.value = true
+
   // Prevenir scroll do body quando modal está aberto
   document.body.style.overflow = 'hidden'
+
+  // Também prevenir scroll em dispositivos iOS
+  document.body.style.position = 'fixed'
+  document.body.style.width = '100%'
+  document.body.style.top = `-${window.scrollY}px`
 }
 
 const closeImageModal = (event) => {
@@ -560,8 +570,23 @@ const closeImageModal = (event) => {
   showImageModal.value = false
   modalImageSrc.value = ''
   modalImageAlt.value = ''
-  // Restaurar scroll do body
-  document.body.style.overflow = 'auto'
+
+  // Restaurar scroll do body de forma mais robusta
+  document.body.style.overflow = originalBodyOverflow.value || 'auto'
+
+  // Restaurar posição em dispositivos iOS
+  const scrollY = document.body.style.top
+  document.body.style.position = ''
+  document.body.style.width = ''
+  document.body.style.top = ''
+
+  // Rolar para a posição original
+  if (scrollY) {
+    window.scrollTo(0, parseInt(scrollY || '0') * -1)
+  }
+
+  // Resetar o estado original
+  originalBodyOverflow.value = ''
 }
 
 // Funções para Porta de Correr
