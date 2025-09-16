@@ -139,7 +139,7 @@
           <div class="text-center">
             <!-- Imagem do produto -->
             <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="" alt="Porta Pivotante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+              <img src="/img/Porta-Angelin-Tradicional.png" alt="Porta Pivotante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
             </div>
 
             <!-- Nome da porta -->
