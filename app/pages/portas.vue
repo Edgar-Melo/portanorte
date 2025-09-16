@@ -357,11 +357,13 @@
       v-if="showImageModal"
       class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
       @click="closeImageModal"
+      @touchstart="closeImageModal"
     >
-      <div class="relative max-w-full max-h-full p-4">
+      <div class="relative max-w-full max-h-full p-4" @click.stop @touchstart.stop>
         <!-- Botão de Fechar -->
         <button
-          @click="closeImageModal"
+          @click.stop="closeImageModal"
+          @touchstart.stop="closeImageModal"
           class="absolute top-2 right-2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 text-white transition duration-300"
         >
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -375,6 +377,7 @@
           :alt="modalImageAlt"
           class="max-w-full max-h-full object-contain rounded-lg"
           @click.stop
+          @touchstart.stop
         />
       </div>
     </div>
@@ -547,7 +550,13 @@ const openImageModal = (src, alt) => {
   document.body.style.overflow = 'hidden'
 }
 
-const closeImageModal = () => {
+const closeImageModal = (event) => {
+  // Prevenir qualquer comportamento padrão
+  if (event) {
+    event.preventDefault()
+    event.stopPropagation()
+  }
+
   showImageModal.value = false
   modalImageSrc.value = ''
   modalImageAlt.value = ''
