@@ -29,7 +29,8 @@
                 ref="portaResidencialImg"
                 src="/img/Porta-Angelik-Horizonte.png"
                 alt="Porta Residencial"
-                class="porta-zoom-image w-full h-full object-contain"
+                class="porta-zoom-image w-full h-full object-contain cursor-pointer"
+                @click="openImageModal('/img/Porta-Angelik-Horizonte.png', 'Porta Residencial')"
               />
 
               <!-- Lupa circular -->
@@ -91,8 +92,9 @@
                 ref="portaCorrerImg"
                 src="/img/Porta-Angelin-Colonial.png" 
                 alt="Porta de Correr" 
-                class="porta-zoom-image"
+                class="porta-zoom-image cursor-pointer"
                 @load="checkPortaCorrerImageLoaded"
+                @click="openImageModal('/img/Porta-Angelin-Colonial.png', 'Porta de Correr')"
               >
               <div 
                 v-if="showPortaCorrerMagnifier"
@@ -152,8 +154,9 @@
                 ref="portaPivotanteImg"
                 src="/img/Porta-Angelin-Tradicional.png"
                 alt="Porta Pivotante"
-                class="porta-zoom-image w-full h-full object-cover"
+                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
                 @load="checkPortaPivotanteImageLoaded"
+                @click="openImageModal('/img/Porta-Angelin-Tradicional.png', 'Porta Pivotante')"
               />
 
               <!-- Lupa circular -->
@@ -348,6 +351,33 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal de Imagem em Tela Cheia -->
+    <div
+      v-if="showImageModal"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+      @click="closeImageModal"
+    >
+      <div class="relative max-w-full max-h-full p-4">
+        <!-- Botão de Fechar -->
+        <button
+          @click="closeImageModal"
+          class="absolute top-2 right-2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 text-white transition duration-300"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <!-- Imagem Ampliada -->
+        <img
+          :src="modalImageSrc"
+          :alt="modalImageAlt"
+          class="max-w-full max-h-full object-contain rounded-lg"
+          @click.stop
+        />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -372,6 +402,11 @@ const portaPivotanteContainer = ref(null)
 const portaPivotanteImg = ref(null)
 const portaPivotanteMagnifier = ref(null)
 const portaPivotanteMagnifierImg = ref(null)
+
+// Estado do modal de imagem
+const showImageModal = ref(false)
+const modalImageSrc = ref('')
+const modalImageAlt = ref('')
 
 // Estado da lupa
 const showMagnifierGlass = ref(false)
@@ -501,6 +536,23 @@ const openWhatsApp = () => {
   const message = 'Olá! Gostaria de saber mais sobre as portas da Porta Norte.'
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
   window.open(whatsappUrl, '_blank')
+}
+
+// Funções do Modal de Imagem
+const openImageModal = (src, alt) => {
+  modalImageSrc.value = src
+  modalImageAlt.value = alt
+  showImageModal.value = true
+  // Prevenir scroll do body quando modal está aberto
+  document.body.style.overflow = 'hidden'
+}
+
+const closeImageModal = () => {
+  showImageModal.value = false
+  modalImageSrc.value = ''
+  modalImageAlt.value = ''
+  // Restaurar scroll do body
+  document.body.style.overflow = 'auto'
 }
 
 // Funções para Porta de Correr
