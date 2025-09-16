@@ -138,8 +138,39 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="/img/Porta-Angelin-Tradicional.png" alt="Porta Pivotante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            <div
+              ref="portaPivotanteContainer"
+              class="porta-zoom-container w-full h-48 overflow-hidden rounded-xl mb-6 bg-gray-50 relative"
+              @mouseenter="showPortaPivotanteMagnifierFunc"
+              @mouseleave="hidePortaPivotanteMagnifierFunc"
+              @mousemove="updatePortaPivotanteMagnifierFunc"
+              @touchstart="showPortaPivotanteMagnifierFunc"
+              @touchmove="updatePortaPivotanteMagnifierFunc"
+              @touchend="hidePortaPivotanteMagnifierFunc"
+            >
+              <img
+                ref="portaPivotanteImg"
+                src="/img/Porta-Angelin-Tradicional.png"
+                alt="Porta Pivotante"
+                class="porta-zoom-image w-full h-full object-cover"
+                @load="checkPortaPivotanteImageLoaded"
+              />
+
+              <!-- Lupa circular -->
+              <div
+                v-if="showPortaPivotanteMagnifier"
+                ref="portaPivotanteMagnifier"
+                class="magnifier"
+                :style="portaPivotanteMagnifierStyle"
+              >
+                <img
+                  ref="portaPivotanteMagnifierImg"
+                  :src="portaPivotanteImg?.src"
+                  alt="Porta Pivotante Ampliada"
+                  class="magnifier-image"
+                  :style="portaPivotanteMagnifierImageStyle"
+                />
+              </div>
             </div>
 
             <!-- Nome da porta -->
@@ -336,6 +367,12 @@ const portaCorrerImg = ref(null)
 const portaCorrerMagnifier = ref(null)
 const portaCorrerMagnifierImg = ref(null)
 
+// Referências para Porta Pivotante
+const portaPivotanteContainer = ref(null)
+const portaPivotanteImg = ref(null)
+const portaPivotanteMagnifier = ref(null)
+const portaPivotanteMagnifierImg = ref(null)
+
 // Estado da lupa
 const showMagnifierGlass = ref(false)
 const magnifierStyle = ref({})
@@ -347,6 +384,12 @@ const showPortaCorrerMagnifier = ref(false)
 const portaCorrerMagnifierStyle = ref({})
 const portaCorrerMagnifierImageStyle = ref({})
 const portaCorrerImageLoaded = ref(false)
+
+// Estado da lupa para Porta Pivotante
+const showPortaPivotanteMagnifier = ref(false)
+const portaPivotanteMagnifierStyle = ref({})
+const portaPivotanteMagnifierImageStyle = ref({})
+const portaPivotanteImageLoaded = ref(false)
 
 // Configurações da lupa
 const magnifierSize = 150 // Tamanho da lupa em pixels
@@ -528,6 +571,80 @@ const updatePortaCorrerMagnifierFunc = (event) => {
   }
 }
 
+// Funções para Porta Pivotante
+const showPortaPivotanteMagnifierFunc = (event) => {
+  if (portaPivotanteImg.value && portaPivotanteImg.value.complete) {
+    portaPivotanteImageLoaded.value = true
+  }
+  showPortaPivotanteMagnifier.value = true
+  if (event) {
+    updatePortaPivotanteMagnifier(event)
+  }
+}
+
+const hidePortaPivotanteMagnifierFunc = () => {
+  showPortaPivotanteMagnifier.value = false
+}
+
+const updatePortaPivotanteMagnifierFunc = (event) => {
+  if (!portaPivotanteContainer.value || !portaPivotanteImg.value || !showPortaPivotanteMagnifier.value || !portaPivotanteImageLoaded.value) return
+
+  const container = portaPivotanteContainer.value
+  const img = portaPivotanteImg.value
+  const containerRect = container.getBoundingClientRect()
+
+  let clientX, clientY
+  if (event.touches && event.touches.length > 0) {
+    clientX = event.touches[0].clientX
+    clientY = event.touches[0].clientY
+  } else {
+    clientX = event.clientX
+    clientY = event.clientY
+  }
+
+  const mouseX = clientX - containerRect.left
+  const mouseY = clientY - containerRect.top
+
+  if (mouseX < 0 || mouseX > containerRect.width || mouseY < 0 || mouseY > containerRect.height) {
+    hidePortaPivotanteMagnifier()
+    return
+  }
+
+  let magnifierX = mouseX - magnifierSize / 2
+  let magnifierY = mouseY - magnifierSize / 2
+
+  magnifierX = Math.max(0, Math.min(magnifierX, containerRect.width - magnifierSize))
+  magnifierY = Math.max(0, Math.min(magnifierY, containerRect.height - magnifierSize))
+
+  const percentX = mouseX / containerRect.width
+  const percentY = mouseY / containerRect.height
+
+  const offsetX = percentX * containerRect.width
+  const offsetY = percentY * containerRect.height
+
+  portaPivotanteMagnifierStyle.value = {
+    left: `${magnifierX}px`,
+    top: `${magnifierY}px`,
+    width: `${magnifierSize}px`,
+    height: `${magnifierSize}px`,
+    position: 'absolute',
+    zIndex: '1000'
+  }
+
+  portaPivotanteMagnifierImageStyle.value = {
+    transform: `scale(${zoomLevel}) translate(${-offsetX}px, ${-offsetY}px)`,
+    transformOrigin: 'top left',
+    width: `${containerRect.width}px`,
+    height: `${containerRect.height}px`
+  }
+}
+
+const checkPortaPivotanteImageLoaded = () => {
+  if (portaPivotanteImg.value && portaPivotanteImg.value.complete) {
+    portaPivotanteImageLoaded.value = true
+  }
+}
+
 // Configurar event listeners quando o componente for montado
 onMounted(() => {
   if (portaResidencialImg.value) {
@@ -546,6 +663,16 @@ onMounted(() => {
     } else {
       portaCorrerImg.value.addEventListener('load', () => {
         portaCorrerImageLoaded.value = true
+      })
+    }
+  }
+
+  if (portaPivotanteImg.value) {
+    if (portaPivotanteImg.value.complete) {
+      portaPivotanteImageLoaded.value = true
+    } else {
+      portaPivotanteImg.value.addEventListener('load', () => {
+        portaPivotanteImageLoaded.value = true
       })
     }
   }
