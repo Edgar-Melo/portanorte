@@ -30,7 +30,6 @@
                 src="/img/Porta-Angelik-Horizonte.png"
                 alt="Porta Residencial"
                 class="porta-zoom-image w-full h-full object-contain cursor-pointer"
-                @click="openImageModal('/img/Porta-Angelik-Horizonte.png', 'Porta Residencial')"
               />
 
               <!-- Lupa circular -->
@@ -94,7 +93,6 @@
                 alt="Porta de Correr" 
                 class="porta-zoom-image cursor-pointer"
                 @load="checkPortaCorrerImageLoaded"
-                @click="openImageModal('/img/Porta-Angelin-Colonial.png', 'Porta de Correr')"
               >
               <div 
                 v-if="showPortaCorrerMagnifier"
@@ -156,7 +154,6 @@
                 alt="Porta Pivotante"
                 class="porta-zoom-image w-full h-full object-cover cursor-pointer"
                 @load="checkPortaPivotanteImageLoaded"
-                @click="openImageModal('/img/Porta-Angelin-Tradicional.png', 'Porta Pivotante')"
               />
 
               <!-- Lupa circular -->
@@ -177,17 +174,17 @@
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta Pivotante</h3>
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelin-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Altura:</span>
-                <span class="text-primary-800 font-semibold">2.40m</span>
+                <span class="text-primary-800 font-semibold">2.10m</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">0.90m</span>
+                <span class="text-primary-600 font-medium">Larguras:</span>
+                <span class="text-primary-800 font-semibold text-sm">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -195,18 +192,8 @@
               </div>
             </div>
 
-            <!-- Preço -->
-            <div class="mb-6">
-              <div class="text-3xl font-bold text-primary-800 mb-2">
-                R$ 2.200,00
-              </div>
-              <div class="text-sm text-primary-600">
-                à vista ou parcelado
-              </div>
-            </div>
-
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-angelin-tradicional')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
@@ -214,12 +201,43 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="" alt="Porta de Madeira Maciça" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            <div
+              ref="portaMadeiraMacicaContainer"
+              class="porta-zoom-container w-full h-48 overflow-hidden rounded-xl mb-6 bg-gray-50 relative"
+              @mouseenter="showPortaMadeiraMacicaMagnifierFunc"
+              @mouseleave="hidePortaMadeiraMacicaMagnifierFunc"
+              @mousemove="updatePortaMadeiraMacicaMagnifierFunc"
+              @touchstart="showPortaMadeiraMacicaMagnifierFunc"
+              @touchmove="updatePortaMadeiraMacicaMagnifierFunc"
+              @touchend="hidePortaMadeiraMacicaMagnifierFunc"
+            >
+              <img
+                ref="portaMadeiraMacicaImg"
+                src="/img/Porta-Pau-Mulato-Tradicional.png"
+                alt="Porta de Madeira Maciça"
+                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
+                @load="checkPortaMadeiraMacicaImageLoaded"
+              />
+
+              <!-- Lupa circular -->
+              <div
+                v-if="showPortaMadeiraMacicaMagnifier"
+                ref="portaMadeiraMacicaMagnifier"
+                class="magnifier"
+                :style="portaMadeiraMacicaMagnifierStyle"
+              >
+                <img
+                  ref="portaMadeiraMacicaMagnifierImg"
+                  :src="portaMadeiraMacicaImg?.src"
+                  alt="Porta de Madeira Maciça Ampliada"
+                  class="magnifier-image"
+                  :style="portaMadeiraMacicaMagnifierImageStyle"
+                />
+              </div>
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta de Madeira Maciça</h3>
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Pau-Mulato-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -229,26 +247,16 @@
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">0.70m</span>
+                <span class="text-primary-800 font-semibold">0.60cm, 0.70cm, 0.80cm</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
-                <span class="text-primary-800 font-semibold">3,5cm</span>
-              </div>
-            </div>
-
-            <!-- Preço -->
-            <div class="mb-6">
-              <div class="text-3xl font-bold text-primary-800 mb-2">
-                R$ 2.800,00
-              </div>
-              <div class="text-sm text-primary-600">
-                à vista ou parcelado
+                2,5cm
               </div>
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-pau-mulato-tradicional')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
@@ -290,7 +298,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomendas')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
@@ -332,7 +340,7 @@
             </div>
 
             <!-- Botão -->
-            <ButtonSecondary @click="$router.push('/encomendas-portas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+            <ButtonPrimary @click="$router.push('/encomendas-portas')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
       </div>
@@ -349,36 +357,6 @@
             Faça um Orçamento
           </ButtonPrimary>
         </div>
-      </div>
-    </div>
-
-    <!-- Modal de Imagem em Tela Cheia -->
-    <div
-      v-if="showImageModal"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
-      @click="closeImageModal"
-      @touchstart="closeImageModal"
-    >
-      <div class="relative max-w-full max-h-full p-4" @click.stop @touchstart.stop>
-        <!-- Botão de Fechar -->
-        <button
-          @click.stop="closeImageModal"
-          @touchstart.stop="closeImageModal"
-          class="absolute top-2 right-2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 text-white transition duration-300"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-
-        <!-- Imagem Ampliada -->
-        <img
-          :src="modalImageSrc"
-          :alt="modalImageAlt"
-          class="max-w-full max-h-full object-contain rounded-lg"
-          @click.stop
-          @touchstart.stop
-        />
       </div>
     </div>
   </section>
@@ -406,11 +384,11 @@ const portaPivotanteImg = ref(null)
 const portaPivotanteMagnifier = ref(null)
 const portaPivotanteMagnifierImg = ref(null)
 
-// Estado do modal de imagem
-const showImageModal = ref(false)
-const modalImageSrc = ref('')
-const modalImageAlt = ref('')
-const originalBodyOverflow = ref('')
+// Referências para Porta de Madeira Maciça
+const portaMadeiraMacicaContainer = ref(null)
+const portaMadeiraMacicaImg = ref(null)
+const portaMadeiraMacicaMagnifier = ref(null)
+const portaMadeiraMacicaMagnifierImg = ref(null)
 
 // Estado da lupa
 const showMagnifierGlass = ref(false)
@@ -429,6 +407,12 @@ const showPortaPivotanteMagnifier = ref(false)
 const portaPivotanteMagnifierStyle = ref({})
 const portaPivotanteMagnifierImageStyle = ref({})
 const portaPivotanteImageLoaded = ref(false)
+
+// Estado da lupa para Porta de Madeira Maciça
+const showPortaMadeiraMacicaMagnifier = ref(false)
+const portaMadeiraMacicaMagnifierStyle = ref({})
+const portaMadeiraMacicaMagnifierImageStyle = ref({})
+const portaMadeiraMacicaImageLoaded = ref(false)
 
 // Configurações da lupa
 const magnifierSize = 150 // Tamanho da lupa em pixels
@@ -540,53 +524,6 @@ const openWhatsApp = () => {
   const message = 'Olá! Gostaria de saber mais sobre as portas da Porta Norte.'
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
   window.open(whatsappUrl, '_blank')
-}
-
-// Funções do Modal de Imagem
-const openImageModal = (src, alt) => {
-  // Salvar estado original do overflow antes de alterar
-  originalBodyOverflow.value = document.body.style.overflow || ''
-
-  modalImageSrc.value = src
-  modalImageAlt.value = alt
-  showImageModal.value = true
-
-  // Prevenir scroll do body quando modal está aberto
-  document.body.style.overflow = 'hidden'
-
-  // Também prevenir scroll em dispositivos iOS
-  document.body.style.position = 'fixed'
-  document.body.style.width = '100%'
-  document.body.style.top = `-${window.scrollY}px`
-}
-
-const closeImageModal = (event) => {
-  // Prevenir qualquer comportamento padrão
-  if (event) {
-    event.preventDefault()
-    event.stopPropagation()
-  }
-
-  showImageModal.value = false
-  modalImageSrc.value = ''
-  modalImageAlt.value = ''
-
-  // Restaurar scroll do body de forma mais robusta
-  document.body.style.overflow = originalBodyOverflow.value || 'auto'
-
-  // Restaurar posição em dispositivos iOS
-  const scrollY = document.body.style.top
-  document.body.style.position = ''
-  document.body.style.width = ''
-  document.body.style.top = ''
-
-  // Rolar para a posição original
-  if (scrollY) {
-    window.scrollTo(0, parseInt(scrollY || '0') * -1)
-  }
-
-  // Resetar o estado original
-  originalBodyOverflow.value = ''
 }
 
 // Funções para Porta de Correr
@@ -731,6 +668,80 @@ const checkPortaPivotanteImageLoaded = () => {
   }
 }
 
+// Funções para Porta de Madeira Maciça
+const showPortaMadeiraMacicaMagnifierFunc = (event) => {
+  if (portaMadeiraMacicaImg.value && portaMadeiraMacicaImg.value.complete) {
+    portaMadeiraMacicaImageLoaded.value = true
+  }
+  showPortaMadeiraMacicaMagnifier.value = true
+  if (event) {
+    updatePortaMadeiraMacicaMagnifier(event)
+  }
+}
+
+const hidePortaMadeiraMacicaMagnifierFunc = () => {
+  showPortaMadeiraMacicaMagnifier.value = false
+}
+
+const updatePortaMadeiraMacicaMagnifierFunc = (event) => {
+  if (!portaMadeiraMacicaContainer.value || !portaMadeiraMacicaImg.value || !showPortaMadeiraMacicaMagnifier.value || !portaMadeiraMacicaImageLoaded.value) return
+
+  const container = portaMadeiraMacicaContainer.value
+  const img = portaMadeiraMacicaImg.value
+  const containerRect = container.getBoundingClientRect()
+
+  let clientX, clientY
+  if (event.touches && event.touches.length > 0) {
+    clientX = event.touches[0].clientX
+    clientY = event.touches[0].clientY
+  } else {
+    clientX = event.clientX
+    clientY = event.clientY
+  }
+
+  const mouseX = clientX - containerRect.left
+  const mouseY = clientY - containerRect.top
+
+  if (mouseX < 0 || mouseX > containerRect.width || mouseY < 0 || mouseY > containerRect.height) {
+    hidePortaMadeiraMacicaMagnifier()
+    return
+  }
+
+  let magnifierX = mouseX - magnifierSize / 2
+  let magnifierY = mouseY - magnifierSize / 2
+
+  magnifierX = Math.max(0, Math.min(magnifierX, containerRect.width - magnifierSize))
+  magnifierY = Math.max(0, Math.min(magnifierY, containerRect.height - magnifierSize))
+
+  const percentX = mouseX / containerRect.width
+  const percentY = mouseY / containerRect.height
+
+  const offsetX = percentX * containerRect.width
+  const offsetY = percentY * containerRect.height
+
+  portaMadeiraMacicaMagnifierStyle.value = {
+    left: `${magnifierX}px`,
+    top: `${magnifierY}px`,
+    width: `${magnifierSize}px`,
+    height: `${magnifierSize}px`,
+    position: 'absolute',
+    zIndex: '1000'
+  }
+
+  portaMadeiraMacicaMagnifierImageStyle.value = {
+    transform: `scale(${zoomLevel}) translate(${-offsetX}px, ${-offsetY}px)`,
+    transformOrigin: 'top left',
+    width: `${containerRect.width}px`,
+    height: `${containerRect.height}px`
+  }
+}
+
+const checkPortaMadeiraMacicaImageLoaded = () => {
+  if (portaMadeiraMacicaImg.value && portaMadeiraMacicaImg.value.complete) {
+    portaMadeiraMacicaImageLoaded.value = true
+  }
+}
+
 // Configurar event listeners quando o componente for montado
 onMounted(() => {
   if (portaResidencialImg.value) {
@@ -759,6 +770,16 @@ onMounted(() => {
     } else {
       portaPivotanteImg.value.addEventListener('load', () => {
         portaPivotanteImageLoaded.value = true
+      })
+    }
+  }
+
+  if (portaMadeiraMacicaImg.value) {
+    if (portaMadeiraMacicaImg.value.complete) {
+      portaMadeiraMacicaImageLoaded.value = true
+    } else {
+      portaMadeiraMacicaImg.value.addEventListener('load', () => {
+        portaMadeiraMacicaImageLoaded.value = true
       })
     }
   }
