@@ -264,12 +264,43 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="w-full h-48 overflow-hidden rounded-xl mb-6">
-              <img src="" alt="Porta com Vidro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+            <div
+              ref="portaMistaTradicionalContainer"
+              class="porta-zoom-container w-full h-48 overflow-hidden rounded-xl mb-6 bg-gray-50 relative"
+              @mouseenter="showPortaMistaTradicionalMagnifierFunc"
+              @mouseleave="hidePortaMistaTradicionalMagnifierFunc"
+              @mousemove="updatePortaMistaTradicionalMagnifierFunc"
+              @touchstart="showPortaMistaTradicionalMagnifierFunc"
+              @touchmove="updatePortaMistaTradicionalMagnifierFunc"
+              @touchend="hidePortaMistaTradicionalMagnifierFunc"
+            >
+              <img
+                ref="portaMistaTradicionalImg"
+                src="/img/Porta-Mista-Tradicional.png"
+                alt="Porta-Mista-Tradicional"
+                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
+                @load="checkPortaMistaTradicionalImageLoaded"
+              />
+
+              <!-- Lupa circular -->
+              <div
+                v-if="showPortaMistaTradicionalMagnifier"
+                ref="portaMistaTradicionalMagnifier"
+                class="magnifier"
+                :style="portaMistaTradicionalMagnifierStyle"
+              >
+                <img
+                  ref="portaMistaTradicionalMagnifierImg"
+                  :src="portaMistaTradicionalImg?.src"
+                  alt="Porta-Mista-Tradicional Ampliada"
+                  class="magnifier-image"
+                  :style="portaMistaTradicionalMagnifierImageStyle"
+                />
+              </div>
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta com Vidro</h3>
+            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Mista-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -279,26 +310,16 @@
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">0.80m</span>
+                <span class="text-primary-800 font-semibold">0.60cm, 0.70cm, 0.80cm</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
-                <span class="text-primary-800 font-semibold">3,5cm</span>
-              </div>
-            </div>
-
-            <!-- Preço -->
-            <div class="mb-6">
-              <div class="text-3xl font-bold text-primary-800 mb-2">
-                R$ 1.600,00
-              </div>
-              <div class="text-sm text-primary-600">
-                à vista ou parcelado
+                <span class="text-primary-800 font-semibold">3,0cm</span>
               </div>
             </div>
 
             <!-- Botão -->
-            <ButtonPrimary @click="$router.push('/encomendas')" class="w-full">Comprar Agora</ButtonPrimary>
+            <ButtonPrimary @click="$router.push('/encomenda-porta-mista-tradicional')" class="w-full">Comprar Agora</ButtonPrimary>
           </div>
         </div>
 
@@ -390,6 +411,12 @@ const portaMadeiraMacicaImg = ref(null)
 const portaMadeiraMacicaMagnifier = ref(null)
 const portaMadeiraMacicaMagnifierImg = ref(null)
 
+// Referências para Porta-Mista-Tradicional
+const portaMistaTradicionalContainer = ref(null)
+const portaMistaTradicionalImg = ref(null)
+const portaMistaTradicionalMagnifier = ref(null)
+const portaMistaTradicionalMagnifierImg = ref(null)
+
 // Estado da lupa
 const showMagnifierGlass = ref(false)
 const magnifierStyle = ref({})
@@ -413,6 +440,12 @@ const showPortaMadeiraMacicaMagnifier = ref(false)
 const portaMadeiraMacicaMagnifierStyle = ref({})
 const portaMadeiraMacicaMagnifierImageStyle = ref({})
 const portaMadeiraMacicaImageLoaded = ref(false)
+
+// Estado da lupa para Porta-Mista-Tradicional
+const showPortaMistaTradicionalMagnifier = ref(false)
+const portaMistaTradicionalMagnifierStyle = ref({})
+const portaMistaTradicionalMagnifierImageStyle = ref({})
+const portaMistaTradicionalImageLoaded = ref(false)
 
 // Configurações da lupa
 const magnifierSize = 150 // Tamanho da lupa em pixels
@@ -742,6 +775,80 @@ const checkPortaMadeiraMacicaImageLoaded = () => {
   }
 }
 
+// Funções para Porta-Mista-Tradicional
+const showPortaMistaTradicionalMagnifierFunc = (event) => {
+  if (portaMistaTradicionalImg.value && portaMistaTradicionalImg.value.complete) {
+    portaMistaTradicionalImageLoaded.value = true
+  }
+  showPortaMistaTradicionalMagnifier.value = true
+  if (event) {
+    updatePortaMistaTradicionalMagnifier(event)
+  }
+}
+
+const hidePortaMistaTradicionalMagnifierFunc = () => {
+  showPortaMistaTradicionalMagnifier.value = false
+}
+
+const updatePortaMistaTradicionalMagnifierFunc = (event) => {
+  if (!portaMistaTradicionalContainer.value || !portaMistaTradicionalImg.value || !showPortaMistaTradicionalMagnifier.value || !portaMistaTradicionalImageLoaded.value) return
+
+  const container = portaMistaTradicionalContainer.value
+  const img = portaMistaTradicionalImg.value
+  const containerRect = container.getBoundingClientRect()
+
+  let clientX, clientY
+  if (event.touches && event.touches.length > 0) {
+    clientX = event.touches[0].clientX
+    clientY = event.touches[0].clientY
+  } else {
+    clientX = event.clientX
+    clientY = event.clientY
+  }
+
+  const mouseX = clientX - containerRect.left
+  const mouseY = clientY - containerRect.top
+
+  if (mouseX < 0 || mouseX > containerRect.width || mouseY < 0 || mouseY > containerRect.height) {
+    hidePortaMistaTradicionalMagnifier()
+    return
+  }
+
+  let magnifierX = mouseX - magnifierSize / 2
+  let magnifierY = mouseY - magnifierSize / 2
+
+  magnifierX = Math.max(0, Math.min(magnifierX, containerRect.width - magnifierSize))
+  magnifierY = Math.max(0, Math.min(magnifierY, containerRect.height - magnifierSize))
+
+  const percentX = mouseX / containerRect.width
+  const percentY = mouseY / containerRect.height
+
+  const offsetX = percentX * containerRect.width
+  const offsetY = percentY * containerRect.height
+
+  portaMistaTradicionalMagnifierStyle.value = {
+    left: `${magnifierX}px`,
+    top: `${magnifierY}px`,
+    width: `${magnifierSize}px`,
+    height: `${magnifierSize}px`,
+    position: 'absolute',
+    zIndex: '1000'
+  }
+
+  portaMistaTradicionalMagnifierImageStyle.value = {
+    transform: `scale(${zoomLevel}) translate(${-offsetX}px, ${-offsetY}px)`,
+    transformOrigin: 'top left',
+    width: `${containerRect.width}px`,
+    height: `${containerRect.height}px`
+  }
+}
+
+const checkPortaMistaTradicionalImageLoaded = () => {
+  if (portaMistaTradicionalImg.value && portaMistaTradicionalImg.value.complete) {
+    portaMistaTradicionalImageLoaded.value = true
+  }
+}
+
 // Configurar event listeners quando o componente for montado
 onMounted(() => {
   if (portaResidencialImg.value) {
@@ -780,6 +887,16 @@ onMounted(() => {
     } else {
       portaMadeiraMacicaImg.value.addEventListener('load', () => {
         portaMadeiraMacicaImageLoaded.value = true
+      })
+    }
+  }
+
+  if (portaMistaTradicionalImg.value) {
+    if (portaMistaTradicionalImg.value.complete) {
+      portaMistaTradicionalImageLoaded.value = true
+    } else {
+      portaMistaTradicionalImg.value.addEventListener('load', () => {
+        portaMistaTradicionalImageLoaded.value = true
       })
     }
   }
