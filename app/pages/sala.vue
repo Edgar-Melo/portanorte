@@ -16,7 +16,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=1" alt="Sofá 3 Lugares" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Sofá 3 Lugares</h3>
@@ -50,7 +50,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=2" alt="Mesa de Centro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Centro</h3>
@@ -84,7 +84,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=3" alt="Estante Modular" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Estante Modular</h3>
@@ -118,7 +118,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=4" alt="Poltrona" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Poltrona</h3>
@@ -152,7 +152,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=5" alt="Mesa Lateral" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa Lateral</h3>
@@ -186,7 +186,7 @@
             <div class="text-center">
               <!-- Imagem do produto -->
               <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=6" alt="Rack para TV" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+                <span class="text-primary-600 font-medium">Imagem em breve</span>
               </div>
               <!-- Nome do móvel -->
               <h3 class="text-2xl font-bold text-primary-800 mb-4">Rack para TV</h3>

@@ -54,36 +54,59 @@
     <!-- Janela Modelo 2 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
-        <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-          <img src="https://picsum.photos/400/300?random=32" alt="Janela de Correr" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+        <div 
+          class="porta-zoom-container w-full h-96 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative"
+          @mouseenter="showMagnifier"
+          @mouseleave="hideMagnifier"
+          @mousemove="updateMagnifier"
+          @touchstart="showMagnifier"
+          @touchmove="updateMagnifier"
+          @touchend="hideMagnifier"
+        >
+          <img 
+            src="/img/Janela-Macacaúba-Horizonte.png" 
+            alt="Janela-Macacaúba-Horizonte" 
+            class="porta-zoom-image w-full h-full object-contain cursor-pointer"
+            @load="checkImageLoaded"
+          />
+
+          <!-- Lupa circular -->
+          <div
+            class="magnifier"
+            :style="magnifierStyle"
+            v-show="showMagnifierGlass"
+          >
+            <img
+              src="/img/Janela-Macacaúba-Horizonte.png"
+              alt="Janela-Macacaúba-Horizonte Ampliada"
+              class="magnifier-image"
+              :style="magnifierImageStyle"
+            />
+          </div>
         </div>
-        <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela de Correr</h3>
+        <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela-Macacaúba-Horizonte</h3>
         <div class="space-y-3 mb-6">
           <div class="flex justify-between items-center">
             <span class="text-primary-600 font-medium">Altura:</span>
-            <span class="text-primary-800 font-semibold">1.50m</span>
+            <span class="text-primary-800 font-semibold">1.00m</span>
           </div>
           <div class="flex justify-between items-center">
             <span class="text-primary-600 font-medium">Largura:</span>
-            <span class="text-primary-800 font-semibold">1.20m</span>
+            <span class="text-primary-800 font-semibold">1.00m</span>
           </div>
           <div class="flex justify-between items-center">
             <span class="text-primary-600 font-medium">Espessura:</span>
             <span class="text-primary-800 font-semibold">3,5cm</span>
           </div>
         </div>
-        <div class="mb-6">
-          <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.200,00</div>
-          <div class="text-sm text-primary-600">à vista ou parcelado</div>
-        </div>
-        <ButtonSecondary @click="$router.push('/encomendas-janelas')" class="w-full">Solicitar Orçamento</ButtonSecondary>
+        <ButtonPrimary @click="$router.push('/encomenda-janela-angelin-tradicional')" class="w-full">Comprar Agora</ButtonPrimary>
       </div>
     </div>
     <!-- Janela Modelo 3 -->
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-          <img src="https://picsum.photos/400/300?random=33" alt="Janela Basculante" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+          <span class="text-primary-600 font-medium">Imagem em breve</span>
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela Basculante</h3>
         <div class="space-y-3 mb-6">
@@ -111,7 +134,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-          <img src="https://picsum.photos/400/300?random=34" alt="Janela com Vidro" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+          <span class="text-primary-600 font-medium">Imagem em breve</span>
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela com Vidro</h3>
         <div class="space-y-3 mb-6">
@@ -139,7 +162,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-          <img src="https://picsum.photos/400/300?random=35" alt="Janela Francesa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+          <span class="text-primary-600 font-medium">Imagem em breve</span>
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela Francesa</h3>
         <div class="space-y-3 mb-6">
@@ -167,7 +190,7 @@
     <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
       <div class="text-center">
         <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-          <img src="https://picsum.photos/400/300?random=36" alt="Janela de Serviço" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
+          <span class="text-primary-600 font-medium">Imagem em breve</span>
         </div>
         <h3 class="text-2xl font-bold text-primary-800 mb-4">Janela de Serviço</h3>
         <div class="space-y-3 mb-6">

@@ -4,7 +4,7 @@
     <header class="bg-white border-b border-gray-200">
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-          <h1 class="text-2xl font-bold text-primary-800">Porta Norte - Janela-Angelin-Tradicional</h1>
+          <h1 class="text-2xl font-bold text-primary-800">Porta Norte - Janela-Macacaúba-Horizonte</h1>
           <button
             @click="$router.push('/janelas')"
             class="bg-primary-200 hover:bg-primary-300 text-primary-800 px-4 py-2 rounded-lg transition duration-300"
@@ -20,7 +20,7 @@
         <!-- Título da Página -->
         <div class="text-center mb-12">
           <h2 class="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
-            Janela-Angelin-Tradicional
+            Janela-Macacaúba-Horizonte
           </h2>
           <p class="text-xl text-primary-700 max-w-3xl mx-auto leading-relaxed text-justify">
             Escolha a largura desejada e veja o valor final do seu produto personalizado.
@@ -35,8 +35,8 @@
             <!-- Imagem do Produto -->
             <div class="mb-6">
               <img
-                src="/img/Janela-Angelin-Tradicional.png"
-                alt="Janela-Angelin-Tradicional"
+                src="/img/Janela-Macacaúba-Horizonte.png"
+                alt="Janela-Macacaúba-Horizonte"
                 class="w-full h-64 object-contain rounded-xl bg-gray-50"
               />
             </div>
@@ -45,7 +45,7 @@
             <div class="space-y-4 mb-6">
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Nome:</span>
-                <span class="text-primary-800 font-semibold">Janela-Angelin-Tradicional</span>
+                <span class="text-primary-800 font-semibold">Janela-Macacaúba-Horizonte</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Altura:</span>
@@ -217,7 +217,7 @@ const enviarEncomenda = () => {
   }
 
   const mensagem = `PRODUTO QUE EU QUERO COMPRAR:
-Produto: Janela-Angelin-Tradicional
+Produto: Janela-Macacaúba-Horizonte
 Largura: ${larguraSelecionada.value}
 Altura: ${altura.toFixed(2)}m
 Espessura: 3,5cm
