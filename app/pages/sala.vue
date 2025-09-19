@@ -45,7 +45,7 @@
                 <img 
                   ref="estanteImg"
                   src="/img/Mesa-Maracatiara.png" 
-                  alt="Estante Modular" 
+                  alt="Mesa-Maracatiara" 
                   class="porta-zoom-image w-full h-full object-contain cursor-pointer"
                   @load="estanteImageLoaded = true"
                 >
@@ -59,14 +59,14 @@
                   <img 
                     ref="estanteMagnifierImg"
                     src="/img/Mesa-Maracatiara.png" 
-                    alt="Estante Modular Ampliada" 
+                    alt="Mesa-Maracatiara Ampliada" 
                     class="magnifier-image"
                     :style="estanteMagnifierImageStyle"
                   >
                 </div>
               </div>
               <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Estante Modular</h3>
+              <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa-Maracatiara</h3>
               <!-- Especificações -->
               <div class="space-y-3 mb-6">
                 <div class="flex justify-between items-center">
@@ -92,7 +92,7 @@
                 <div class="text-sm text-primary-600">à vista ou parcelado</div>
               </div>
               <!-- Botão -->
-              <button @click="$router.push('/encomenda-estante-modular')" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 w-full">Comprar Agora</button>
+              <button @click="$router.push('/encomenda-mesa-maracatiara')" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 w-full">Comprar Agora</button>
             </div>
           </div>
 
@@ -217,7 +217,7 @@
 <script setup>
 import { ref } from 'vue'
 
-// Referências para o zoom da Estante Modular
+// Referências para o zoom da Mesa-Maracatiara
 const estanteContainer = ref(null)
 const estanteImg = ref(null)
 const estanteMagnifier = ref(null)
