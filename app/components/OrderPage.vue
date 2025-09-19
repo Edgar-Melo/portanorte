@@ -146,23 +146,50 @@ const submitOrder = () => {
   if (!isFormValid.value) return
 
   // Construct WhatsApp message
-  let message = `PRODUTO QUE EU QUERO COMPRAR:
+  let message = ''
+  
+  // Check if this is a Sala product (back-link contains '/sala')
+  const isSalaProduct = props.backLink && props.backLink.includes('/sala')
+  
+  if (isSalaProduct) {
+    // New format for Sala products
+    message = `PRODUTO QUE EU QUERO COMPRAR: 
+
 Produto: ${props.productName}
 `
 
-  // Add specifications
-  props.productSpecs.forEach(spec => {
-    message += `${spec.label}: ${spec.value}
+    // Add specifications
+    props.productSpecs.forEach(spec => {
+      message += `${spec.label}: ${spec.value}
 `
-  })
+    })
 
-  message += `Valor base (R$ 1400.00/m²)
+    message += `★ VALOR TOTAL: ${props.productPrice} 
+
+📋 DADOS DO CLIENTE: 
+Nome: ${formData.name || '[ ]'}
+WhatsApp: ${formData.whatsapp || '[ ]'}
+Observações: ${formData.observations || '[ ]'}`
+  } else {
+    // Original format for other products
+    message = `PRODUTO QUE EU QUERO COMPRAR:
+Produto: ${props.productName}
+`
+
+    // Add specifications
+    props.productSpecs.forEach(spec => {
+      message += `${spec.label}: ${spec.value}
+`
+    })
+
+    message += `Valor base (R$ 1400.00/m²)
 ★ VALOR TOTAL: ${props.productPrice} ★
 
 📋 DADOS DO CLIENTE:
 Nome: ${formData.name}
 WhatsApp: ${formData.whatsapp}
 ${formData.observations ? `Observações: ${formData.observations}` : 'Observações: [ ]'}`
+  }
 
   const encodedMessage = encodeURIComponent(message)
   const whatsappNumber = '+559681379746' // Número do WhatsApp para testes
