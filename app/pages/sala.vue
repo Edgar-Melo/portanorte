@@ -29,6 +29,21 @@
           />
 
           <!-- Móvel Modelo 3 -->
+          <MesinhaAngelinCard
+            :image="'/img/Mesinha-Mista.png'"
+            :title="'Mesinha-Mista'"
+            :specs="[
+              { label: 'Largura', value: '0,60cm' },
+              { label: 'Poltronas', value: '4-unidades' },
+              { label: 'Altura', value: '0,68cm' }
+            ]"
+            :price="'R$ 1.400,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-mesinha-mista'"
+            :buttonType="'button'"
+          />
+
+          <!-- Móvel Modelo 4 -->
           <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
             <div class="text-center">
               <!-- Imagem do produto -->
@@ -93,40 +108,6 @@
               </div>
               <!-- Botão -->
               <button @click="$router.push('/encomenda-mesa-maracatiara')" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 w-full">Comprar Agora</button>
-            </div>
-          </div>
-
-          <!-- Móvel Modelo 4 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <span class="text-primary-600 font-medium">Imagem em breve</span>
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Poltrona</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.80m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.85m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.90m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.200,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomenda-poltrona" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Comprar Agora</NuxtLink>
             </div>
           </div>
 
