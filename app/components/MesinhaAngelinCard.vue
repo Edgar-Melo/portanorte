@@ -28,7 +28,7 @@
       </div>
       <!-- Botão -->
       <button v-if="buttonType === 'button'" @click="$router.push(buttonLink)" class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 w-full">{{ buttonText }}</button>
-      <a v-else :href="buttonLink" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">{{ buttonText }}</a>
+      <NuxtLink v-else :to="buttonLink" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">{{ buttonText }}</NuxtLink>
     </div>
   </div>
 </template>
