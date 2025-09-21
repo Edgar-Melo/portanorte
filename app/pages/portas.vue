@@ -51,11 +51,11 @@
         <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
           <div class="text-center">
             <!-- Imagem do produto -->
-            <div class="porta-zoom-container h-64">
+            <div class="porta-zoom-container w-full h-48 overflow-hidden rounded-xl mb-6 bg-gray-50 relative">
               <img
                 src="/img/Porta-Angelin-Colonial.png"
                 alt="Porta de Correr"
-                class="porta-zoom-image cursor-pointer"
+                class="porta-zoom-image w-full h-full object-contain cursor-pointer"
               />
             </div>            <!-- Nome da porta -->
             <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelin-Colonial</h3>
@@ -89,7 +89,7 @@
               <img
                 src="/img/Porta-Angelin-Tradicional.png"
                 alt="Porta-Angelin-Tradicional"
-                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
+                class="porta-zoom-image w-full h-full object-contain cursor-pointer"
               />
             </div>
 
@@ -125,7 +125,7 @@
               <img
                 src="/img/Porta-Pau-Mulato-Tradicional.png"
                 alt="Porta de Madeira Maciça"
-                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
+                class="porta-zoom-image w-full h-full object-contain cursor-pointer"
               />
             </div>
 
@@ -161,7 +161,7 @@
               <img
                 src="/img/Porta-Mista-Tradicional.png"
                 alt="Porta-Mista-Tradicional"
-                class="porta-zoom-image w-full h-full object-cover cursor-pointer"
+                class="porta-zoom-image w-full h-full object-contain cursor-pointer"
               />
             </div>
 
