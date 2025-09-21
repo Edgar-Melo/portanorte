@@ -12,208 +12,93 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Móvel Modelo 1 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=13" alt="Armário de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Armário de Cozinha</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.90m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.45m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">2.10m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.800,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'/img/Armario de Cozinha.png'"
+            :title="'Armário de Cozinha'"
+            :specs="[
+              { label: 'Largura', value: '0.80m' },
+              { label: 'Profundidade', value: '0.39m' },
+              { label: 'Altura', value: '1.70m' }
+            ]"
+            :price="'R$ 2.000,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-armario-cozinha'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 2 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=14" alt="Mesa de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Cozinha</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">1.20m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.80m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.75m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 950,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'/img/Mesa Cozinha Mogno.png'"
+            :title="'Mesa Cozinha Mogno'"
+            :specs="[
+              { label: 'Comprimento', value: '1.47m' },
+              { label: 'Largura', value: '0,77cm' },
+              { label: 'Altura', value: '0,77cm' },
+              { label: 'Poltronas', value: '6-unidades' }
+            ]"
+            :price="'R$ 3.000,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomendas-cozinha?product=Mesa%20Cozinha%20Mogno&price=3000&specs=1.47x0.77x0.77'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 3 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=15" alt="Balcão de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Balcão de Cozinha</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">1.50m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.60m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.90m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.200,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'/img/Armario Maracatiara.png'"
+            :title="'Armario Maracatiara'"
+            :specs="[
+              { label: 'Largura', value: '1.53m' },
+              { label: 'Profundidade', value: '0.48cm' },
+              { label: 'Altura', value: '1.82m' }
+            ]"
+            :price="'R$ 4.000,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomendas-cozinha?product=Armario%20Maracatiara&price=4000&specs=1.53x0.48x1.82'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 4 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=16" alt="Cadeira de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Cadeira de Cozinha</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.45m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.50m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.85m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 350,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'/img/Cadeira de Cozinha.png'"
+            :title="'Cadeira de Cozinha'"
+            :specs="[
+              { label: 'Largura', value: '0.45m' },
+              { label: 'Profundidade', value: '0.50m' },
+              { label: 'Altura', value: '0.85m' }
+            ]"
+            :price="'R$ 350,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomendas-cozinha?product=Cadeira%20de%20Cozinha&price=350&specs=0.45x0.50x0.85'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 5 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=17" alt="Despensa" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Despensa</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.80m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.40m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">2.00m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.400,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'https://picsum.photos/400/300?random=17'"
+            :title="'Despensa'"
+            :specs="[
+              { label: 'Largura', value: '0.80m' },
+              { label: 'Profundidade', value: '0.40m' },
+              { label: 'Altura', value: '2.00m' }
+            ]"
+            :price="'R$ 1.400,00'"
+            :buttonText="'Solicitar Orçamento'"
+            :buttonLink="'/encomendas-cozinha'"
+          />
 
           <!-- Móvel Modelo 6 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=18" alt="Carrinho de Cozinha" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Carrinho de Cozinha</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.60m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.50m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.90m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 650,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-cozinha" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <KitchenProductCard
+            :image="'https://picsum.photos/400/300?random=18'"
+            :title="'Carrinho de Cozinha'"
+            :specs="[
+              { label: 'Largura', value: '0.60m' },
+              { label: 'Profundidade', value: '0.50m' },
+              { label: 'Altura', value: '0.90m' }
+            ]"
+            :price="'R$ 650,00'"
+            :buttonText="'Solicitar Orçamento'"
+            :buttonLink="'/encomendas-cozinha'"
+          />
         </div>
 
         <!-- Call to Action -->

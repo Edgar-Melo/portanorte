@@ -15,7 +15,7 @@
       { label: '(R$ 3200.00)', value: 'R$ 3.200,00' },
       { label: 'Tipo', value: 'Mesa Macacauba Confort' }
     ]"
-    back-link="/sala"
+    back-link="/cozinha"
   />
 </template>
 

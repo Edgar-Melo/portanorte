@@ -171,8 +171,9 @@ Nome: ${formData.name || '[ ]'}
 WhatsApp: ${formData.whatsapp || '[ ]'}
 Observações: ${formData.observations || '[ ]'}`
   } else {
-    // Original format for other products
-    message = `PRODUTO QUE EU QUERO COMPRAR:
+    // Format for kitchen and other products
+    message = `PRODUTO QUE EU QUERO COMPRAR: 
+
 Produto: ${props.productName}
 `
 
@@ -182,13 +183,12 @@ Produto: ${props.productName}
 `
     })
 
-    message += `Valor base (R$ 1400.00/m²)
-★ VALOR TOTAL: ${props.productPrice} ★
+    message += `★ VALOR TOTAL: ${props.productPrice}
 
-📋 DADOS DO CLIENTE:
-Nome: ${formData.name}
-WhatsApp: ${formData.whatsapp}
-${formData.observations ? `Observações: ${formData.observations}` : 'Observações: [ ]'}`
+📋 DADOS DO CLIENTE: 
+Nome: ${formData.name || '[ ]'}
+WhatsApp: ${formData.whatsapp || '[ ]'}
+Observações: ${formData.observations || '[ ]'}`
   }
 
   const encodedMessage = encodeURIComponent(message)
