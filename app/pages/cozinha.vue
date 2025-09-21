@@ -74,30 +74,50 @@
 
           <!-- Móvel Modelo 5 -->
           <KitchenProductCard
-            :image="'https://picsum.photos/400/300?random=17'"
-            :title="'Despensa'"
+            :image="'/img/Mesa Madeira Roxa.png'"
+            :title="'Mesa Madeira Roxa'"
             :specs="[
-              { label: 'Largura', value: '0.80m' },
-              { label: 'Profundidade', value: '0.40m' },
-              { label: 'Altura', value: '2.00m' }
+              { label: 'Comprimento', value: '2m' },
+              { label: 'Largura', value: '0,78cm' },
+              { label: 'Altura', value: '0,76cm' },
+              { label: 'Bancos', value: '4-unidades' }
             ]"
-            :price="'R$ 1.400,00'"
-            :buttonText="'Solicitar Orçamento'"
+            :price="'R$ 3.700,00'"
+            :buttonText="'Comprar Agora'"
             :buttonLink="'/encomendas-cozinha'"
+            :buttonType="'button'"
           />
 
           <!-- Móvel Modelo 6 -->
           <KitchenProductCard
-            :image="'https://picsum.photos/400/300?random=18'"
-            :title="'Carrinho de Cozinha'"
+            :image="'/img/Mesa-Macacaúba.png'"
+            :title="'Mesa-Macacaúba'"
             :specs="[
-              { label: 'Largura', value: '0.60m' },
-              { label: 'Profundidade', value: '0.50m' },
-              { label: 'Altura', value: '0.90m' }
+              { label: 'Comprimento', value: '2m' },
+              { label: 'Largura', value: '0,78cm' },
+              { label: 'Altura', value: '0,76cm' },
+              { label: 'Bancos', value: '4-unidades' }
             ]"
-            :price="'R$ 650,00'"
-            :buttonText="'Solicitar Orçamento'"
+            :price="'R$ 3.700,00'"
+            :buttonText="'Comprar Agora'"
             :buttonLink="'/encomendas-cozinha'"
+            :buttonType="'button'"
+          />
+
+          <!-- Móvel Modelo 7 -->
+          <KitchenProductCard
+            :image="'/img/Mesa-Mista-com-Bancos.png'"
+            :title="'Mesa-Mista-com-Bancos'"
+            :specs="[
+              { label: 'Comprimento', value: '1m' },
+              { label: 'Largura', value: '0,78cm' },
+              { label: 'Altura', value: '0,76cm' },
+              { label: 'Bancos', value: '2-unidades' }
+            ]"
+            :price="'R$ 2.000,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomendas-cozinha'"
+            :buttonType="'button'"
           />
         </div>
 

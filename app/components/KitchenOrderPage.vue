@@ -29,7 +29,7 @@
 
             <!-- Imagem ilustrativa -->
             <div class="mb-6">
-              <img :src="`/img/${productName}.png`" :alt="productName" class="w-full h-64 object-contain rounded-xl bg-gray-50">
+              <img :src="productName === 'Mesa-Mista-com-Bancos' ? '/img/Mesa-Mista-com-Bancos.png' : `/img/${productName}.png`" :alt="productName" class="w-full h-64 object-contain rounded-xl bg-gray-50">
             </div>
 
             <!-- Especificações -->
@@ -129,15 +129,18 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 // Dados dinâmicos baseados na query
-const productName = ref(route.query.product || 'Cadeira de Cozinha')
-const productPrice = ref(route.query.price || '350')
+const productName = ref(route.query.product || 'Mesa-Mista-com-Bancos')
+const productPrice = ref(route.query.price || '2000')
+const isMesa = computed(() => productName.value.includes('Mesa'))
+const specLabels = computed(() => isMesa.value ? ['Comprimento', 'Largura', 'Altura', 'Bancos'] : ['Largura', 'Profundidade', 'Altura'])
 const productSpecs = ref(route.query.specs ? route.query.specs.split('x').map((s, i) => ({
-  label: ['Largura', 'Profundidade', 'Altura'][i],
-  value: s + 'm'
+  label: specLabels.value[i] || specLabels.value[0],
+  value: s + (isMesa.value ? '' : 'm')
 })) : [
-  { label: 'Largura', value: '0.45m' },
-  { label: 'Profundidade', value: '0.50m' },
-  { label: 'Altura', value: '0.85m' }
+  { label: 'Comprimento', value: '1m' },
+  { label: 'Largura', value: '0,78cm' },
+  { label: 'Altura', value: '0,76cm' },
+  { label: 'Bancos', value: '2-unidades' }
 ])
 
 // Dados do formulário

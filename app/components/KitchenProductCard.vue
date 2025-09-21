@@ -55,7 +55,7 @@ const props = defineProps({
   },
   buttonText: {
     type: String,
-    default: 'Solicitar Orçamento'
+    default: 'Comprar Agora'
   },
   buttonLink: {
     type: String,
@@ -63,7 +63,7 @@ const props = defineProps({
   },
   buttonType: {
     type: String,
-    default: 'link' // 'button' or 'link'
+    default: 'button' // 'button' or 'link'
   }
 })
 
