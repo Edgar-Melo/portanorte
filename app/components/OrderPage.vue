@@ -44,6 +44,7 @@
             <div class="mb-6">
               <div class="text-3xl font-bold text-primary-800 mb-2">{{ productPrice }}</div>
               <div class="text-sm text-primary-600">à vista ou parcelado</div>
+              <div v-if="productObservation" class="text-sm text-primary-600 mt-2">{{ productObservation }}</div>
             </div>
 
             <!-- Cálculo do Preço -->
@@ -129,6 +130,10 @@ const props = defineProps({
   backLink: {
     type: String,
     default: '/'
+  },
+  productObservation: {
+    type: String,
+    default: ''
   }
 })
 

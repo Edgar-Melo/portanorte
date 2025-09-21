@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-// Página de encomendas para móveis de quartos
+import BedroomOrderPage from '~/components/BedroomOrderPage.vue'
 </script>

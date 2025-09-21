@@ -12,208 +12,94 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Móvel Modelo 1 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=7" alt="Cama de Casal" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Cama de Casal</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">1.60m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Comprimento:</span>
-                  <span class="text-primary-800 font-semibold">2.00m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.30m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 2.200,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Cama-Rostic.png'"
+            :title="'Cama-Rustic'"
+            :specs="[
+              { label: 'Largura', value: '1.60m' },
+              { label: 'Comprimento', value: '2.00m' },
+              { label: 'Altura', value: '0.60cm' }
+            ]"
+            :price="'R$ 3.500,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-cama-rostic'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 2 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=8" alt="Guarda-Roupa 4 Portas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Guarda-Roupa 4 Portas</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">2.00m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.60m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">2.20m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 3.500,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Cama-Rustic-Bordada.png'"
+            :title="'Cama-Rustic-Bordada'"
+            :specs="[
+              { label: 'Largura', value: '1,40m' },
+              { label: 'Comprimento', value: '1,90m' },
+              { label: 'Altura', value: '0,56cm' }
+            ]"
+            :price="'R$ 3.500,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-cama-rustic-bordada'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 3 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=9" alt="Mesa de Cabeceira" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Mesa de Cabeceira</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.50m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.40m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.60m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 450,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Cama-Cabeceira-Simples.png'"
+            :title="'Cama-Cabeceira-Simples'"
+            :specs="[
+              { label: 'Comprimento', value: '1,88m' },
+              { label: 'Largura', value: '1,38m' },
+              { label: 'Altura', value: '0,43cm' }
+            ]"
+            :price="'R$ 1.500,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-mesa-de-cabeceira'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 4 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=10" alt="Cômoda 6 Gavetas" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Cômoda 6 Gavetas</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">1.00m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.50m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">1.20m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 1.800,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Comoda-Média.png'"
+            :title="'Cômoda 6 Gavetas'"
+            :specs="[
+              { label: 'Largura', value: '0,97cm' },
+              { label: 'Profundidade', value: '0,50cm' },
+              { label: 'Altura', value: '0,97cm' }
+            ]"
+            :price="'R$ 1.700,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-comoda-6-gavetas'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 5 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=11" alt="Espelho para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Espelho para Quarto</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.80m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">1.60m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.05m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 650,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Comoda-Sapateira.png'"
+            :title="'Cômoda-Sapateira'"
+            :specs="[
+              { label: 'Largura', value: '1,04m' },
+              { label: 'Altura', value: '0,88cm' },
+              { label: 'Profundidade', value: '0,47cm' }
+            ]"
+            :price="'R$ 1.700,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-comoda-sapateira'"
+            :buttonType="'button'"
+          />
 
           <!-- Móvel Modelo 6 -->
-          <div class="bg-white rounded-2xl p-6 shadow-2xl border border-gray-200">
-            <div class="text-center">
-              <!-- Imagem do produto -->
-              <div class="w-full h-48 bg-primary-200 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                <img src="https://picsum.photos/400/300?random=12" alt="Banqueta para Quarto" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 cursor-pointer" />
-              </div>
-              <!-- Nome do móvel -->
-              <h3 class="text-2xl font-bold text-primary-800 mb-4">Banqueta para Quarto</h3>
-              <!-- Especificações -->
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Largura:</span>
-                  <span class="text-primary-800 font-semibold">0.45m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Profundidade:</span>
-                  <span class="text-primary-800 font-semibold">0.35m</span>
-                </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-primary-600 font-medium">Altura:</span>
-                  <span class="text-primary-800 font-semibold">0.50m</span>
-                </div>
-              </div>
-              <!-- Preço -->
-              <div class="mb-6">
-                <div class="text-3xl font-bold text-primary-800 mb-2">R$ 380,00</div>
-                <div class="text-sm text-primary-600">à vista ou parcelado</div>
-              </div>
-              <!-- Botão -->
-              <NuxtLink to="/encomendas-quartos" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Solicitar Orçamento</NuxtLink>
-            </div>
-          </div>
+          <BedroomProductCard
+            :image="'/img/Guarda-Roupa-Maracatiara.png'"
+            :title="'Guarda-Roupa-Maracatiara'"
+            :specs="[
+              { label: 'Largura', value: '2,10m' },
+              { label: 'Altura', value: '2,10m' },
+              { label: 'Profundidade', value: '0,50cm' }
+            ]"
+            :price="'R$ 7.000,00'"
+            :buttonText="'Comprar Agora'"
+            :buttonLink="'/encomenda-guarda-roupa-maracatiara'"
+            :buttonType="'button'"
+          />
         </div>
 
         <!-- Call to Action -->
@@ -232,12 +118,7 @@
 </template>
 
 <script setup>
-// const openWhatsApp = () => {
-//   const phoneNumber = '5596981379746'
-//   const message = 'Olá! Gostaria de saber mais sobre os móveis para quartos da Porta Norte.'
-//   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-//   window.open(whatsappUrl, '_blank')
-// }
+import BedroomProductCard from '~/components/BedroomProductCard.vue'
 </script>
 
 <style scoped>

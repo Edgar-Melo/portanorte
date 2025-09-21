@@ -10,7 +10,7 @@
         Conforto e elegância para receber seus convidados.
       </p>
     </div>
-    <NuxtLink to="/sala" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full">Ver Detalhes</NuxtLink>
+    <NuxtLink to="/sala" class="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300 block mx-auto w-full text-center">Ver Detalhes</NuxtLink>
   </div>
 </template>
 
