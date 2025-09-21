@@ -22,7 +22,7 @@
 
         <!-- Lado direito: Imagem -->
         <div class="flex justify-center lg:justify-end">
-          <img src="/img/frente.png" alt="Frente da Porta Norte" class="w-full max-w-lg h-80 object-cover rounded-2xl shadow-lg">
+          <img src="/img/Logo-Porta-Norte.png" alt="Logo da Porta Norte" class="w-full max-w-lg h-80 object-cover rounded-2xl shadow-lg">
         </div>
       </div>
     </div>
