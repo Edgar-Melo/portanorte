@@ -14,11 +14,12 @@
         <!-- Formulário de Contato -->
         <div class="bg-white rounded-2xl p-8 shadow-2xl border border-gray-200">
           <h3 class="text-2xl font-bold text-primary-800 mb-6">Envie sua Mensagem</h3>
-          <form class="space-y-6">
+          <form @submit.prevent="sendContactMessage" class="space-y-6">
             <!-- Nome -->
             <div>
               <label class="block text-primary-600 font-medium mb-2">Nome Completo *</label>
               <input
+                v-model="contactForm.name"
                 type="text"
                 required
                 class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900 placeholder-gray-500"
@@ -30,6 +31,7 @@
             <div>
               <label class="block text-primary-600 font-medium mb-2">Telefone *</label>
               <input
+                v-model="contactForm.phone"
                 type="tel"
                 required
                 class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900 placeholder-gray-500"
@@ -41,6 +43,7 @@
             <div>
               <label class="block text-primary-600 font-medium mb-2">E-mail</label>
               <input
+                v-model="contactForm.email"
                 type="email"
                 class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900 placeholder-gray-500"
                 placeholder="seu@email.com"
@@ -51,6 +54,7 @@
             <div>
               <label class="block text-primary-600 font-medium mb-2">Endereço</label>
               <input
+                v-model="contactForm.address"
                 type="text"
                 class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900 placeholder-gray-500"
                 placeholder="Rua, número, bairro, cidade"
@@ -60,7 +64,10 @@
             <!-- Assunto -->
             <div>
               <label class="block text-primary-600 font-medium mb-2">Assunto</label>
-              <select class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900">
+              <select
+                v-model="contactForm.subject"
+                class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900"
+              >
                 <option value="">Selecione um assunto</option>
                 <option value="orcamento">Solicitar Orçamento</option>
                 <option value="duvida">Tirar Dúvida</option>
@@ -73,6 +80,7 @@
             <div>
               <label class="block text-primary-600 font-medium mb-2">Mensagem</label>
               <textarea
+                v-model="contactForm.message"
                 rows="5"
                 class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary-500 focus:outline-none bg-white bg-opacity-90 text-gray-900 placeholder-gray-500 resize-vertical"
                 placeholder="Digite sua mensagem aqui..."
@@ -82,9 +90,10 @@
             <!-- Botão de Envio -->
             <button
               type="submit"
+              :disabled="!isFormValid || isSubmitting"
               class="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-500 text-white font-semibold py-4 px-8 rounded-lg transition duration-300 shadow-lg"
             >
-              Enviar Mensagem
+              {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
             </button>
           </form>
         </div>
@@ -162,7 +171,83 @@
 </template>
 
 <script setup>
-// Component logic can be added here if needed
+import { ref, reactive, computed } from 'vue'
+
+// Dados do formulário de contato
+const contactForm = reactive({
+  name: '',
+  phone: '',
+  email: '',
+  address: '',
+  subject: '',
+  message: ''
+})
+
+const isSubmitting = ref(false)
+
+// Validação do formulário
+const isFormValid = computed(() => {
+  return contactForm.name.trim() && contactForm.phone.trim()
+})
+
+// Enviar mensagem de contato
+const sendContactMessage = async () => {
+  if (!isFormValid.value) {
+    alert('Por favor, preencha pelo menos nome e telefone.')
+    return
+  }
+
+  isSubmitting.value = true
+
+  try {
+    // Construir mensagem para WhatsApp
+    let message = `CONTATO - PORTA NORTE\n\n`
+    message += `Nome: ${contactForm.name}\n`
+    message += `Telefone: ${contactForm.phone}\n`
+    
+    if (contactForm.email) {
+      message += `E-mail: ${contactForm.email}\n`
+    }
+    
+    if (contactForm.address) {
+      message += `Endereço: ${contactForm.address}\n`
+    }
+    
+    if (contactForm.subject) {
+      const subjectLabels = {
+        'orcamento': 'Solicitar Orçamento',
+        'duvida': 'Tirar Dúvida',
+        'visita': 'Agendar Visita',
+        'outro': 'Outro'
+      }
+      message += `Assunto: ${subjectLabels[contactForm.subject] || contactForm.subject}\n`
+    }
+    
+    if (contactForm.message) {
+      message += `\nMensagem:\n${contactForm.message}\n`
+    }
+
+    // Codificar e abrir WhatsApp
+    const encodedMessage = encodeURIComponent(message)
+    const phoneNumber = '5596981379746'
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+    window.open(whatsappUrl, '_blank')
+
+    // Limpar formulário
+    contactForm.name = ''
+    contactForm.phone = ''
+    contactForm.email = ''
+    contactForm.address = ''
+    contactForm.subject = ''
+    contactForm.message = ''
+
+  } catch (error) {
+    console.error('Erro ao enviar mensagem:', error)
+    alert('Erro ao enviar mensagem. Tente novamente.')
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
 
 <style scoped>

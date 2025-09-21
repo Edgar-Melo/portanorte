@@ -104,7 +104,7 @@
               <!-- Botão de Envio -->
               <button
                 type="submit"
-                :disabled="isSubmitting"
+                :disabled="!isFormValid || isSubmitting"
                 class="w-full bg-primary-600 hover:bg-primary-700 disabled:bg-gray-500 text-white font-semibold py-4 px-8 rounded-lg transition duration-300 shadow-lg"
               >
                 {{ isSubmitting ? 'Enviando...' : 'Enviar Encomenda de Móvel' }}
@@ -187,7 +187,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import FurnitureCalculator from '~/components/FurnitureCalculator.vue'
 
 // Dados do formulário
@@ -201,6 +201,11 @@ const formData = reactive({
 const fileInput = ref(null)
 const imagePreview = ref('')
 const isSubmitting = ref(false)
+
+// Validação do formulário
+const isFormValid = computed(() => {
+  return formData.name.trim() && formData.whatsapp.trim() && formData.description.trim()
+})
 
 // Manipular upload de arquivo
 const handleFileUpload = (event) => {
@@ -240,22 +245,45 @@ const removeImage = () => {
 
 // Enviar encomenda
 const submitOrder = async () => {
-  if (!formData.name || !formData.whatsapp || !formData.description) {
-    alert('Por favor, preencha todos os campos obrigatórios.')
-    return
-  }
+  if (!isFormValid.value) return
 
   isSubmitting.value = true
 
   try {
-    // Aqui você pode implementar o envio dos dados para o backend
-    // Por enquanto, vamos simular o envio
-    console.log('Dados da encomenda:', formData)
+    let imageUrl = ''
 
-    // Simular delay de envio
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Se houver imagem, fazer upload para ImgBB
+    if (formData.image) {
+      const formDataUpload = new FormData()
+      formDataUpload.append('image', formData.image)
 
-    alert('Encomenda enviada com sucesso! Entraremos em contato em breve.')
+      const uploadResponse = await fetch('https://api.imgbb.com/1/upload?key=bb4e8b8c8f8f8f8f8f8f8f8f8f8f8f8f', {  // Substitua pela sua chave da ImgBB
+        method: 'POST',
+        body: formDataUpload
+      })
+
+      const uploadData = await uploadResponse.json()
+      if (uploadData.success) {
+        imageUrl = uploadData.data.url
+      } else {
+        throw new Error('Erro no upload da imagem')
+      }
+    }
+
+    // Construir mensagem para WhatsApp
+    let message = `ENCOMENDA DE MÓVEL PARA ESCRITÓRIO:\n\n`
+    message += `Nome: ${formData.name}\n`
+    message += `WhatsApp: ${formData.whatsapp}\n`
+    message += `Descrição: ${formData.description}\n`
+    if (imageUrl) {
+      message += `Imagem de referência: ${imageUrl}\n`
+    }
+
+    // Codificar e abrir WhatsApp
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappNumber = '+559681379746'
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+    window.open(whatsappUrl, '_blank')
 
     // Limpar formulário
     formData.name = ''

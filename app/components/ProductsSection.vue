@@ -17,22 +17,11 @@
         <LivingRoomCard />
         <KitchenCard />
         <BedroomCard />
-        <OfficeCard />
-        <BathroomCard />
+        <!-- <OfficeCard /> -->
+        <!-- <BathroomCard /> -->
       </div>
 
-      <!-- Call to Action -->
-      <div class="text-center mt-16">
-        <div class="bg-primary-200 rounded-2xl p-8 text-primary-800">
-          <h3 class="text-3xl font-bold mb-4">Precisa de Algo Específico?</h3>
-          <p class="text-xl mb-6 text-primary-700 text-justify">
-            Temos soluções personalizadas para todas as suas necessidades em madeira.
-          </p>
-          <ButtonPrimary @click="$router.push('/encomendas')">
-            Faça um Orçamento
-          </ButtonPrimary>
-        </div>
-      </div>
+      <!-- Call to Action removido temporariamente -->
     </div>
   </section>
 </template>
@@ -44,8 +33,8 @@ import WindowCard from '~/components/WindowCard.vue'
 import LivingRoomCard from '~/components/LivingRoomCard.vue'
 import KitchenCard from '~/components/KitchenCard.vue'
 import BedroomCard from '~/components/BedroomCard.vue'
-import OfficeCard from '~/components/OfficeCard.vue'
-import BathroomCard from '~/components/BathroomCard.vue'
+// import OfficeCard from '~/components/OfficeCard.vue'
+// import BathroomCard from '~/components/BathroomCard.vue'
 
 const openWhatsApp = () => {
   const phoneNumber = '5596981379746'
