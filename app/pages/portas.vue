@@ -1,6 +1,22 @@
 <template>
-  <section class="py-20">
-    <div class="container mx-auto px-6">
+  <section cl            <!-- Nome da porta -->
+            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Angelik</h3>
+
+            <!-- Especificações -->
+            <div class="space-y-3 mb-6">
+              <div class="flex justify-between items-center">
+                <span class="text-primary-600 font-medium">Altura:</span>
+                <span class="text-primary-800 font-semibold">2.10m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-primary-600 font-medium">Largura:</span>
+                <span class="text-primary-800 font-semibold">0.60cm, 0.70cm, 0.80cm</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-primary-600 font-medium">Espessura:</span>
+                <span class="text-primary-800 font-semibold">3,5cm</span>
+              </div>
+            </div><div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
           Nossas Portas
@@ -58,7 +74,7 @@
                 class="porta-zoom-image w-full h-full object-contain cursor-pointer"
               />
             </div>            <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelin-Colonial</h3>
+            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Angelin-Colonial</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -67,8 +83,8 @@
                 <span class="text-primary-800 font-semibold">2.10m</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Larguras:</span>
-                <span class="text-primary-800 font-semibold text-sm">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
+                <span class="text-primary-600 font-medium">Largura:</span>
+                <span class="text-primary-800 font-semibold">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -94,7 +110,7 @@
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Angelin-Tradicional</h3>
+            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Angelin-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -103,8 +119,8 @@
                 <span class="text-primary-800 font-semibold">2.10m</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Larguras:</span>
-                <span class="text-primary-800 font-semibold text-sm">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
+                <span class="text-primary-600 font-medium">Largura:</span>
+                <span class="text-primary-800 font-semibold">0.80cm, 0.83cm, 0.93cm, 1.00M, 1.20M</span>
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
@@ -130,7 +146,7 @@
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Pau-Mulato-Tradicional</h3>
+            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Pau-Mulato-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
@@ -144,7 +160,7 @@
               </div>
               <div class="flex justify-between items-center">
                 <span class="text-primary-600 font-medium">Espessura:</span>
-                2,5cm
+                <span class="text-primary-800 font-semibold">2,5cm</span>
               </div>
             </div>
 
@@ -166,7 +182,7 @@
             </div>
 
             <!-- Nome da porta -->
-            <h3 class="text-2xl font-bold text-primary-800 mb-4">Porta-Mista-Tradicional</h3>
+            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Mista-Tradicional</h3>
 
             <!-- Especificações -->
             <div class="space-y-3 mb-6">
