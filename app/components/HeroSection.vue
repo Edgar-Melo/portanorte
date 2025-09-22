@@ -1,7 +1,7 @@
 <template>
   <section class="lg:min-h-screen flex items-center justify-center py-16">
     <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <!-- Lado esquerdo: Texto de apresentação -->
         <div class="text-left animate-fade-in">
           <h1 class="text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">

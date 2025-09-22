@@ -1,22 +1,6 @@
 <template>
-  <section cl            <!-- Nome da porta -->
-            <h3 class="text-xl font-bold text-primary-800 mb-4 leading-tight">Porta-Angelik</h3>
-
-            <!-- Especificações -->
-            <div class="space-y-3 mb-6">
-              <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Altura:</span>
-                <span class="text-primary-800 font-semibold">2.10m</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Largura:</span>
-                <span class="text-primary-800 font-semibold">0.60cm, 0.70cm, 0.80cm</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-primary-600 font-medium">Espessura:</span>
-                <span class="text-primary-800 font-semibold">3,5cm</span>
-              </div>
-            </div><div class="container mx-auto px-6">
+  <section class="py-16">
+    <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
           Nossas Portas
