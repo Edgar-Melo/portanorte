@@ -1,33 +1,26 @@
 <template>
-  <section class="lg:min-h-screen flex items-center justify-center py-16">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <!-- Lado esquerdo: Texto de apresentação -->
-        <div class="text-left animate-fade-in">
-          <h1 class="text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-            <span class="block text-primary-800">Porta</span>
-            <span class="block text-primary-600">Norte</span>
-          </h1>
-          <h2 class="text-3xl font-bold text-primary-800 mb-6">
-            Móveis em Madeira de Qualidade
-          </h2>
-          <p class="text-xl text-primary-700 mb-10 leading-relaxed max-w-lg text-justify">
-            Especialistas em portas, janelas e materiais para construção em Oiapoque.
-            Transformamos madeira em arte, criando peças únicas para o seu lar.
-            Oferecemos soluções personalizadas com dedicação e excelência.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-6">
-            <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="scrollToProducts">Ver Produtos</ButtonPrimary>
-            <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="openQuoteModal">Faça um Orçamento</ButtonSecondary>
-          </div>
-        </div>
+  <section class="relative min-h-screen bg-cover bg-center" style="background-image: url('/img/um móveleiro fabrica.png');">
+    <!-- Overlay para melhor legibilidade do texto -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
-        <!-- Lado direito: Imagem do Moveleiro -->
-        <div class="flex justify-center lg:justify-end animate-slide-in-right p-6">
-          <div class="relative">
-            <img src="/img/um móveleiro fabrica.png" alt="Marceneiro da Porta Norte" class="w-full max-w-xl h-96 object-cover rounded-2xl shadow-2xl border-2 border-gray-300 hover:border-primary-400 transition-colors duration-300">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
-          </div>
+    <!-- Conteúdo principal -->
+    <div class="relative z-10 container mx-auto px-6 flex items-center min-h-screen">
+      <div class="text-left animate-fade-in max-w-lg">
+        <h1 class="text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+          <span class="block text-white">Porta</span>
+          <span class="block text-primary-600">Norte</span>
+        </h1>
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Móveis em Madeira de Qualidade
+        </h2>
+        <p class="text-xl text-white mb-10 leading-relaxed max-w-lg text-justify">
+          Especialistas em portas, janelas e materiais para construção em Oiapoque.
+          Transformamos madeira em arte, criando peças únicas para o seu lar.
+          Oferecemos soluções personalizadas com dedicação e excelência.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <ButtonPrimary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="scrollToProducts">Ver Produtos</ButtonPrimary>
+          <ButtonSecondary class="transform hover:scale-105 transition-transform duration-300 shadow-lg" @click="openQuoteModal">Faça um Orçamento</ButtonSecondary>
         </div>
       </div>
     </div>
