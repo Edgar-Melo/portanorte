@@ -23,8 +23,11 @@
         </div>
 
         <!-- Lado direito: Imagem do Moveleiro -->
-        <div class="flex justify-center lg:justify-end animate-slide-in-right">
-          <img src="/img/marceneiro-portanorte.png" alt="Marceneiro da Porta Norte" class="w-full max-w-lg h-80 object-cover rounded-2xl shadow-2xl border border-gray-200">
+        <div class="flex justify-center lg:justify-end animate-slide-in-right p-6">
+          <div class="relative">
+            <img src="/img/marceneiro-portanorte.png" alt="Marceneiro da Porta Norte" class="w-full max-w-xl h-96 object-cover rounded-2xl shadow-2xl border-2 border-gray-300 hover:border-primary-400 transition-colors duration-300">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+          </div>
         </div>
       </div>
     </div>
