@@ -35,26 +35,6 @@
           placeholder="Descreva detalhadamente a janela desejada. Inclua medidas, tipo de madeira, acabamento, estilo, etc."
         ></textarea>
       </div>
-      <!-- Upload de Foto -->
-      <div>
-        <label class="block text-primary-600 font-medium mb-2">Foto de Referência</label>
-        <div class="border-2 border-dashed border-primary-400 rounded-lg p-6 text-center hover:border-primary-500 transition duration-300">
-          <input
-            ref="fileInput"
-            type="file"
-            accept="image/*"
-            @change="handleFileUpload"
-            class="hidden"
-          />
-          <div class="cursor-pointer" @click="$refs.fileInput.click()">
-            <svg class="w-12 h-12 text-primary-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-            </svg>
-            <p class="text-primary-700 mb-2">Clique para fazer upload de uma foto</p>
-            <p class="text-sm text-primary-600">PNG, JPG até 10MB</p>
-          </div>
-        </div>
-      </div>
       <!-- Botão de Envio -->
       <button
         type="submit"
