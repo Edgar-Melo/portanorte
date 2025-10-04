@@ -1,7 +1,7 @@
 <template>
   <div v-if="isVisible" class="fixed bottom-6 right-6 z-50 group">
     <a
-      href="https://wa.me/5596981379746?text=Olá! Gostaria de saber mais sobre os produtos da Porta Norte."
+      href="https://wa.me/5596984263674?text=Olá! Gostaria de saber mais sobre os produtos da Porta Norte."
       target="_blank"
       rel="noopener noreferrer"
       class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 block"

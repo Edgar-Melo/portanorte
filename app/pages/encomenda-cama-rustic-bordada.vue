@@ -179,7 +179,7 @@ Observações: ${formData.value.description || '[ ]'}`
     const encodedMessage = encodeURIComponent(message)
 
     // Abrir WhatsApp com a mensagem
-    window.open(`https://wa.me/5596981379746?text=${encodedMessage}`, '_blank')
+    window.open(`https://wa.me/5596984263674?text=${encodedMessage}`, '_blank')
 
     // Limpar formulário
     formData.value.name = ''

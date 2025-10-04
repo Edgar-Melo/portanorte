@@ -233,7 +233,7 @@ const submitOrder = () => {
 
   // Codificar a mensagem para URL
   const mensagemEncoded = encodeURIComponent(mensagem)
-  const whatsappUrl = `https://wa.me/5596981379746?text=${mensagemEncoded}`
+  const whatsappUrl = `https://wa.me/5596984263674?text=${mensagemEncoded}`
 
   // Abrir WhatsApp
   window.open(whatsappUrl, '_blank')

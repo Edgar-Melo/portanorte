@@ -134,7 +134,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-bold text-primary-800">Telefone</h4>
-                  <p class="text-primary-700">(96) 98137-9746</p>
+                  <p class="text-primary-700">+55 96 9 8426 3674</p>
                 </div>
               </div>
 
