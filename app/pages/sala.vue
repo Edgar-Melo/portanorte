@@ -79,7 +79,7 @@
           <!-- Móvel Modelo 6 -->
           <MesinhaAngelinCard
             :image="'/img/Mesa-Angelin-Rajado.png'"
-            :title="'Mesa-Angelin-Rajado'"
+            :title="'Mesa-Angelin-Pintado'"
             :specs="[
               { label: 'Comprimento', value: '1.60m' },
               { label: 'Largura', value: '0.90m' },
